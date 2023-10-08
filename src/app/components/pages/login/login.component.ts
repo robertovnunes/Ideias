@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
       }
       return false;
     }
-    let result = false;
+    let result: boolean;
     /*try {
       this.userloginService.getUser(this.username.value).subscribe(u => {
         this.user = u.data;

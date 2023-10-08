@@ -25,11 +25,7 @@ export class NavbarComponent implements OnInit {
           this.isLogedIn = false;
         } else {
           this.isLogedIn = true;
-          if(this.localStorageService.get('user')?.role === 'admin'){
-            this.isAdmin = true;
-        } else {
-          this.isAdmin = false;
-        }
+          this.isAdmin = this.localStorageService.get('user')?.role === 'admin';
         }
       }
     });
