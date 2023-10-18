@@ -3,7 +3,12 @@ const mongoose = require("mongoose");
 const server = express();
 const port = 3000;
 
-const url = "mongodb+srv://ideias:7RNqCm9RZxXnUWZ5@clusterideias.9hxxv5o.mongodb.net/?retryWrites=true&w=majority"
+require('dotenv').config()
+
+const DB_USERNAME = process.env.DB_USERNAME;
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
+
+const url = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@clusterideias.9hxxv5o.mongodb.net/ideias?retryWrites=true&w=majority`
 
 
 server.use(
