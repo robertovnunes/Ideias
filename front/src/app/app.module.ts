@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterLink, RouterOutlet} from "@angular/router";
-import {ReactiveFormsModule} from "@angular/forms";
-
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
@@ -13,6 +13,7 @@ import { ButtonComponent } from './components/shared/button/button.component';
 import { NewuserComponent } from './components/admin/newuser/newuser.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
+import { ProfileComponent} from "./components/admin/profile/profile.component";
 
 @NgModule({
   declarations: [
@@ -21,15 +22,18 @@ import { LoginComponent } from './components/pages/login/login.component';
     NewuserComponent,
     HomeComponent,
     LoginComponent,
-    ButtonComponent
+    ButtonComponent,
+    ProfileComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterLink,
-    RouterOutlet,
-    ReactiveFormsModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterLink,
+        RouterOutlet,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

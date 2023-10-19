@@ -15,11 +15,11 @@ class dataResponse {
   providedIn: 'root'
 })
 export class UserloginService {
-  private apiUrl = "http://127.0.0.1:3000/users/username?username=";
+  private apiUrl = "http://127.0.0.1:3000/user/";
   constructor(private http: HttpClient) { }
 
   getUser(value: string | null){
-    let response = this.http.get<dataResponse>(this.apiUrl!.toString());
+    let response = this.http.get<dataResponse>(this.apiUrl.toString()+value);
     if (response === null) {
       throw new Error('User not found');
     }

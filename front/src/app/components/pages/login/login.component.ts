@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-//import {UserloginService} from "../../../service/userlogin/userlogin.service";
+import {UserloginService} from "../../../service/userlogin/userlogin.service";
 import {User} from "../../../service/interfaces/user";
 import {LocalStorageService} from "../../../service/local-storage.service";
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private readonly fb: FormBuilder,
               private router: Router,
-              //private userloginService: UserloginService,
+              private userloginService: UserloginService,
               private localStorageService: LocalStorageService) {
     this.localStorageService.set('user', null);
     this.username = this.fb.control('', [Validators.required]);
@@ -90,7 +90,7 @@ export class LoginComponent implements OnInit {
       return false;
     }
     let result: boolean;
-    /*try {
+    try {
       this.userloginService.getUser(this.username.value).subscribe(u => {
         this.user = u.data;
       });
@@ -98,9 +98,10 @@ export class LoginComponent implements OnInit {
       if (e instanceof Error) {
         return false;
       }
-    }*/
-    if ((this.username.value === this.user.cpf) || (this.username.value === this.user.email)) {
-      result = this.password.value === this.user.senha;
+    }
+    if ((this.username?.value === this.user?.username)
+        || (this.username?.value === this.user?.email)) {
+      result = this.password?.value === this.user?.password;
     } else {
       result = false;
     }

@@ -13,7 +13,7 @@
     <ul id="nav-mobile" name="options" class="right hide-on-med-and-down">
       <li><a *ngIf="!isLogedIn" routerLink="/blog">Blog</a></li>
       <li><a *ngIf="isLogedIn" routerLink="/aplicacoes">Aplicações</a></li>
-      <li><a *ngIf="isLogedIn" routerLink="/perfil">Perfil</a></li>
+      <li><a *ngIf="isLogedIn" routerLink="/profile">Perfil</a></li>
       <li><a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes">Configurações</a></li>
       <li class="logout" *ngIf="isLogedIn" (click)="logout()"><a routerLink="/logout">Sair</a></li>
     </ul>

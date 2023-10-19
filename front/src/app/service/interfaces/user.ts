@@ -1,9 +1,7 @@
 export interface User {
-  nome: string;
-  sobrenome: string;
-  cpf: string;
-  email: string;
-  senha: string;
-  telefone: string;
-  dataNascimento: string;
+  name: String,
+  email: String,
+  username: String,
+  roles: String,
+  password: String
 }
