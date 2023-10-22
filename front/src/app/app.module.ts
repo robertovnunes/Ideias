@@ -14,17 +14,18 @@ import { NewuserComponent } from './components/admin/newuser/newuser.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { ProfileComponent} from "./components/admin/profile/profile.component";
+import {NgIf} from "@angular/common";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    NewuserComponent,
-    HomeComponent,
-    LoginComponent,
-    ButtonComponent,
-    ProfileComponent
-  ],
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        NewuserComponent,
+        HomeComponent,
+        LoginComponent,
+        ButtonComponent,
+        ProfileComponent
+    ],
     imports: [
         BrowserModule,
         RouterLink,
@@ -32,9 +33,13 @@ import { ProfileComponent} from "./components/admin/profile/profile.component";
         ReactiveFormsModule,
         AppRoutingModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        NgIf
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    exports: [
+        NavbarComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
