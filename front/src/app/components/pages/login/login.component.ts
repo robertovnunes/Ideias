@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {UserloginService} from "../../../service/userlogin/userlogin.service";
+import {UserService} from "../../../service/user/user.service";
 import {User} from "../../../service/interfaces/user";
 import {LocalStorageService} from "../../../service/local-storage.service";
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private readonly fb: FormBuilder,
               private router: Router,
-              private userloginService: UserloginService,
+              private userloginService: UserService,
               private localStorageService: LocalStorageService) {
     this.localStorageService.set('user', null);
     this.username = this.fb.control('', [Validators.required]);
