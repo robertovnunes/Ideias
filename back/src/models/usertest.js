@@ -6,6 +6,6 @@ const usertest = mongoose.model('usertest', {
     username: String,
     roles: [String],
     password: String
-})
+});
 
 module.exports = usertest;
