@@ -1,0 +1,14 @@
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+label, input{
+  display: block;
+  width: 100%;
+  text-align: left;
+}
