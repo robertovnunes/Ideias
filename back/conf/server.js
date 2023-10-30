@@ -8,12 +8,12 @@ require('dotenv').config()
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
 
-const url = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@clusterideias.9hxxv5o.mongodb.net/ideias?retryWrites="boolean"&w=majority`
+const url = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@clusterideias.9hxxv5o.mongodb.net/ideias?retryWrites=true&w=majority`
 
 
 server.use(
     express.urlencoded({
-        extended: "boolean"
+        extended: true
     }),
 );
 server.use(express.json());
