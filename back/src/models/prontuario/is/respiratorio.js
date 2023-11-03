@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const respiratorio =  {
     corrimento_nasal: {
         claro: Boolean,
@@ -47,4 +48,4 @@ const respiratorio =  {
     }
 }
 
-module.exports = respiratorio;
+module.exports = mongoose.model("respiratorio", respiratorio);

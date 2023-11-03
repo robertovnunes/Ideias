@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const cardiovascular = {
     dispneia: {
         sim: Boolean,
@@ -18,4 +19,4 @@ const cardiovascular = {
         nao_avaliado: Boolean
     }
 }
-module.exports = cardiovascular;
+module.exports = mongoose.model("cardiovascular", cardiovascular);

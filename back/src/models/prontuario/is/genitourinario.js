@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const genitourinario = {
     urina: {
         quantidade: {
@@ -104,4 +105,4 @@ const genitourinario = {
     }
 }
 
-module.exports = genitourinario;
+module.exports = mongoose.model("genitourinario", genitourinario);

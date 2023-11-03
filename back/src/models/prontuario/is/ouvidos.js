@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const ouvidos = {
     dor: {
         ouvido_esquerdo: Boolean,
@@ -22,4 +23,4 @@ const ouvidos = {
     }
 }
 
-module.exports = ouvidos;
+module.exports = mongoose.model("ouvidos", ouvidos);
