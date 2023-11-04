@@ -1,6 +1,39 @@
 <h3>Prontuário Geral</h3>
 <div class="container">
-  <form >
-    <div></div>
+  <form>
+    <div class="febre">
+      <label for="febre">Febre</label>
+      <select id="febre">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        <option value="nao avaliado">Não avaliado</option>
+      </select>
+    </div>
+    <div class="peso">
+      <label for="peso">Tosse</label>
+      <select id="peso">
+        <option value="ganho">Ganho</option>
+        <option value="perda">Perda</option>
+        <option value="sem alteração">Sem alteração</option>
+        <option value="nao avaliado">Não avaliado</option>
+      </select>
+    </div>
+    <div class="apetite">
+      <label for="apetite">Apetite</label>
+      <select id="apetite">
+        <option value="falta">Falta</option>
+        <option value="excesso">Excesso</option>
+        <option value="normal">Normal</option>
+        <option value="nao avaliado">Não avaliado</option>
+      </select>
+    </div>
+    <div class="altura">
+      <label for="altura">Altura</label>
+      <input type="text" name="altura" id="altura" placeholder="Altura">
+    </div>
+    <div class="obs">
+      <label for="obs">Observações gerais</label>
+      <input type="text" name="obs" id="obs" placeholder="Observações gerais">
+    </div>
   </form>
 </div>

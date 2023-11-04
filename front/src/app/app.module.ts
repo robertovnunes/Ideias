@@ -17,7 +17,8 @@ import { ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
 import { InformanteComponent } from './components/pages/prontuario/IS/informante/informante.component';
 import { GeralComponent } from './components/pages/prontuario/IS/geral/geral.component';
-
+import { PeleComponent } from './components/pages/prontuario/IS/pele/pele.component';
+import { OlhosComponent } from './components/pages/prontuario/IS/olhos/olhos.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -28,7 +29,9 @@ import { GeralComponent } from './components/pages/prontuario/IS/geral/geral.com
         ButtonComponent,
         ProfileComponent,
         InformanteComponent,
-        GeralComponent
+        GeralComponent,
+        PeleComponent,
+        OlhosComponent
     ],
     imports: [
         BrowserModule,
