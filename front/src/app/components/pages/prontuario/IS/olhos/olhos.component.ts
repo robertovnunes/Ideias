@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./olhos.component.css']
 })
 export class OlhosComponent {
-  readonly opcoes = ["Sim", "Não", "Não avaliado"]
+  readonly opcoes = ["Sim", "Não", "Não avaliado"];
 }
