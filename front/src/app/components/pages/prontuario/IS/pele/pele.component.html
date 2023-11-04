@@ -1,0 +1,27 @@
+<div class="container">
+  <form>
+    <div class="rash">
+      <select id="rash">
+        <option value="selecione">Selecione</option>
+        <option *ngFor="let item of rash" value="{{item}}">{{item}}</option>
+      </select>
+    </div>
+    <div class="ictericia">
+      <select id="ictericia">
+        <option value="selecione">Selecione</option>
+        <option *ngFor="let item of ictericia" value="{{item}}">{{item}}</option>
+      </select>
+    </div>
+    <div class="repeticao">
+      <select id="repeticao">
+        <option value="selecione">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+        <option value="não avaliado">Não avaliado</option>
+      </select>
+    </div>
+    <div class="obs">
+      <textarea id="obs" placeholder="Observação"></textarea>
+    </div>
+  </form>
+</div>
