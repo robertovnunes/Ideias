@@ -15,6 +15,8 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
+import { InformanteComponent } from './components/pages/prontuario/IS/informante/informante.component';
+import { GeralComponent } from './components/pages/prontuario/IS/geral/geral.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,9 @@ import {NgIf} from "@angular/common";
         HomeComponent,
         LoginComponent,
         ButtonComponent,
-        ProfileComponent
+        ProfileComponent,
+        InformanteComponent,
+        GeralComponent
     ],
     imports: [
         BrowserModule,

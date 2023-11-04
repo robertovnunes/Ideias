@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <title>IDEIAS</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="navbar.component.css">
@@ -14,7 +15,7 @@
       <li><a *ngIf="isLogedIn" routerLink="/aplicacoes">Aplicações</a></li>
       <li><a *ngIf="isLogedIn" routerLink="/profile">Perfil</a></li>
       <li><a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes">Configurações</a></li>
-      <li class="logout" *ngIf="isLogedIn" (click)="logout()"><a routerLink="/logout">Sair</a></li>
+      <li class="logout" *ngIf="isLogedIn" (click)="alert('sair')"><a routerLink="/logout">Sair</a></li>
     </ul>
   </div>
 </nav>
