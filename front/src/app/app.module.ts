@@ -17,11 +17,7 @@ import {LoginComponent} from './components/pages/login/login.component';
 import {ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
 import {ProntuarioPediatriaModule} from "./components/pages/prontuariopediatria/prontuariopediatria.module";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatExpansionModule} from "@angular/material/expansion";
-import {MatListModule} from "@angular/material/list";
-import {MatSelectModule} from "@angular/material/select";
-import {NavbarBrandDirective, NavbarComponent} from "@coreui/angular";
+
 
 @NgModule({
   declarations: [
@@ -43,13 +39,7 @@ import {NavbarBrandDirective, NavbarComponent} from "@coreui/angular";
     FormsModule,
     NgIf,
     ProntuarioPediatriaRoutingModule,
-    ProntuarioPediatriaModule,
-    BrowserAnimationsModule,
-    MatExpansionModule,
-    MatListModule,
-    MatSelectModule,
-    NavbarBrandDirective,
-    NavbarComponent
+    ProntuarioPediatriaModule
   ],
   providers: [],
   exports: [

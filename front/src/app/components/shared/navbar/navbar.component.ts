@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, RouterEvent} from "@angular/router";
 import {LocalStorageService} from "../../../service/local-storage.service";
-import {NavbarModule} from '@coreui/angular';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
