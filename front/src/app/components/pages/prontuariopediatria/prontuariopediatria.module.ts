@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProntuarioRoutingModule } from './prontuario.routing.module';
+import { ProntuarioPediatriaRoutingModule } from './prontuariopediatria.routing.module';
 
 import { OlhosComponent } from './IS/olhos/olhos.component';
 import { InformanteComponent } from './IS/informante/informante.component';
@@ -20,7 +20,7 @@ import { ProntuarioComponent } from './prontuario.component';
   ],
   imports: [
     CommonModule,
-    ProntuarioRoutingModule,
+    ProntuarioPediatriaRoutingModule,
   ]
 })
-export class ProntuarioModule { }
+export class ProntuarioPediatriaModule { }

@@ -6,7 +6,7 @@ import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app.routing.module';
-import {ProntuarioRoutingModule} from "./components/pages/prontuario/prontuario.routing.module";
+import {ProntuarioPediatriaRoutingModule} from "./components/pages/prontuariopediatria/prontuariopediatria.routing.module";
 
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {ButtonComponent} from './components/shared/button/button.component';
@@ -16,7 +16,12 @@ import {HomeComponent} from './components/pages/home/home.component';
 import {LoginComponent} from './components/pages/login/login.component';
 import {ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
-import {ProntuarioModule} from "./components/pages/prontuario/prontuario.module";
+import {ProntuarioPediatriaModule} from "./components/pages/prontuariopediatria/prontuariopediatria.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatListModule} from "@angular/material/list";
+import {MatSelectModule} from "@angular/material/select";
+import {NavbarBrandDirective, NavbarComponent} from "@coreui/angular";
 
 @NgModule({
   declarations: [
@@ -37,8 +42,14 @@ import {ProntuarioModule} from "./components/pages/prontuario/prontuario.module"
     HttpClientModule,
     FormsModule,
     NgIf,
-    ProntuarioRoutingModule,
-    ProntuarioModule
+    ProntuarioPediatriaRoutingModule,
+    ProntuarioPediatriaModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    MatListModule,
+    MatSelectModule,
+    NavbarBrandDirective,
+    NavbarComponent
   ],
   providers: [],
   exports: [
