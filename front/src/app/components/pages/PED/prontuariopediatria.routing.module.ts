@@ -5,7 +5,7 @@ import { ProntuarioComponent } from './prontuario.component';
 
 const routes: Routes = [
   { path: 'olhos', component: OlhosComponent },
-  { path: 'prontuariopediatria', component: ProntuarioComponent },
+  { path: 'PED', component: ProntuarioComponent },
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-prontuariopediatria',
+  selector: 'app-PED',
   templateUrl: './prontuario.component.html',
   styleUrls: ['./prontuario.component.css']
 })

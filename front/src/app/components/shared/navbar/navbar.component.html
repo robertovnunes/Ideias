@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="navbar.component.css">
 </head>
 <body>
-<nav>
-  <a routerLink="/home" class="brand-logo">IDEIAS</a>
-  <ul id="" name="options" class="menu">
-    <li><a routerLink="/blog">Blog</a></li>
-    <li *ngIf="isLogedIn" class="dropdown">
+<nav class="navbar">
+  <a routerLink="/home">IDEIAS</a>
+  <div class="menu">
+    <a routerLink="/blog" class="">Blog</a>
+    <div *ngIf="isLogedIn" class="dropdown">
       <a>Prontuarios</a>
-      <div class="dropdown-content">
-        <a routerLink="/pediatrico">Pediatrico</a>
-      </div>
-    </li>
-    <li><a *ngIf="isLogedIn" routerLink="/profile">Perfil</a></li>
-    <li><a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes">Configurações</a></li>
-    <li class="logout" *ngIf="isLogedIn" (click)="alert('sair')"><a routerLink="/logout">Sair</a></li>
-  </ul>
+      <ul class="dropdown-content">
+        <li><a routerLink="/pediatrico">Pediatrico</a></li>
+      </ul>
+    </div>
+    <a *ngIf="isLogedIn" routerLink="/profile" class="menu-item">Perfil</a>
+    <a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes" class="menu-item">Configurações</a>
+    <a routerLink="/logout" *ngIf="isLogedIn" (click)="alert('sair')" class="menu-item">Sair</a>
+  </div>
 </nav>
 </body>

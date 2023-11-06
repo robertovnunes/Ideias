@@ -6,7 +6,7 @@ import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app.routing.module';
-import {ProntuarioPediatriaRoutingModule} from "./components/pages/prontuariopediatria/prontuariopediatria.routing.module";
+import {ProntuarioPediatriaRoutingModule} from "./components/pages/PED/prontuariopediatria.routing.module";
 
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {ButtonComponent} from './components/shared/button/button.component';
@@ -16,7 +16,7 @@ import {HomeComponent} from './components/pages/home/home.component';
 import {LoginComponent} from './components/pages/login/login.component';
 import {ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
-import {ProntuarioPediatriaModule} from "./components/pages/prontuariopediatria/prontuariopediatria.module";
+import {ProntuarioPediatriaModule} from "./components/pages/PED/prontuariopediatria.module";
 
 
 @NgModule({
