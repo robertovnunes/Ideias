@@ -8,17 +8,18 @@
 </head>
 <body>
 <nav>
-  <div class="nav-wrapper">
-    <a routerLink="/home" class="brand-logo">IDEIAS</a>
-    <ul id="nav-mobile" name="options" class="right hide-on-med-and-down">
-      <li><a routerLink="/blog">Blog</a></li>
-      <li>
-        <a routerLink="/prontuarios">Prontuarios</a>
-      </li>
-      <li><a *ngIf="isLogedIn" routerLink="/profile">Perfil</a></li>
-      <li><a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes">Configurações</a></li>
-      <li class="logout" *ngIf="isLogedIn" (click)="alert('sair')"><a routerLink="/logout">Sair</a></li>
-    </ul>
-  </div>
+  <a routerLink="/home" class="brand-logo">IDEIAS</a>
+  <ul id="" name="options" class="menu">
+    <li><a routerLink="/blog">Blog</a></li>
+    <li *ngIf="isLogedIn" class="dropdown">
+      <a>Prontuarios</a>
+      <div class="dropdown-content">
+        <a routerLink="/pediatrico">Pediatrico</a>
+      </div>
+    </li>
+    <li><a *ngIf="isLogedIn" routerLink="/profile">Perfil</a></li>
+    <li><a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes">Configurações</a></li>
+    <li class="logout" *ngIf="isLogedIn" (click)="alert('sair')"><a routerLink="/logout">Sair</a></li>
+  </ul>
 </nav>
 </body>
