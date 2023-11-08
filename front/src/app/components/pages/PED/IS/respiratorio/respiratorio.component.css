@@ -63,3 +63,7 @@ input mat-select{
   display: flex;
   flex-direction: column;
 }
+
+.formItem h2 {
+  color: #333333;
+}
