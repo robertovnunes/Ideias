@@ -25,13 +25,9 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="dor formItem">
-      <mat-label>Olho esquerdo</mat-label>
-      <mat-select class="oe" id="oe">
-        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
-      </mat-select>
-      <mat-label>Olho direito</mat-label>
-      <mat-select class="od" id="od">
-        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
+      <mat-label>Dor</mat-label>
+      <mat-select class="dor">
+        <mat-option *ngFor="let item of dor" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="acuidade formItem">

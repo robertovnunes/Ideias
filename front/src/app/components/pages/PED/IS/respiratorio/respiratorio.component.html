@@ -1,0 +1,68 @@
+<div class="container">
+  <form>
+    <mat-form-field class="formItem">
+      <mat-label>Corrimento nasal</mat-label>
+      <mat-select formControlName="corrimento">
+        <mat-option *ngFor="let corrimento of corrimento_nasal" value="{{corrimento}}">
+          {{corrimento}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Sufocação/Tosse durante alimentação</mat-label>
+      <mat-select formControlName="corrimento">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Epistaxis</mat-label>
+      <mat-select formControlName="epistaxis">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Epistaxis</mat-label>
+      <mat-select formControlName="epistaxis">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Resfriados frequentes</mat-label>
+      <mat-select formControlName="resfriados_frequentes">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Dor torácica</mat-label>
+      <mat-select formControlName="dor_toracica">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Dificuldade respiratoria</mat-label>
+      <mat-select formControlName="dificuldade_respiratoria">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Hemoptise</mat-label>
+      <mat-select formControlName="hemoptise">
+        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">
+          {{opcao}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>

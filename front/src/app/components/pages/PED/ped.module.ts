@@ -15,19 +15,18 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {GeralComponent} from "./IS/geral/geral.component";
-import { ISComponent } from './is/is.component';
+import { ISComponent } from './IS/is.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { OuvidosComponent } from './IS/ouvidos/ouvidos.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { RespiratorioComponent } from './IS/respiratorio/respiratorio.component';
 
 
 @NgModule({
   declarations: [
-    OlhosComponent,
     PeleComponent,
     PedComponent,
     ISComponent,
-    OuvidosComponent
   ],
   imports: [
     CommonModule,
@@ -43,6 +42,9 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     GeralComponent,
     MatExpansionModule,
     MatSlideToggleModule,
+    RespiratorioComponent,
+    OuvidosComponent,
+    OlhosComponent,
   ]
 })
 export class PedModule { }

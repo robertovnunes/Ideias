@@ -8,13 +8,19 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 
 @Component({
-  selector: 'app-olhos',
-  templateUrl: './olhos.component.html',
-  styleUrls: ['./olhos.component.css'],
+  selector: 'app-respiratorio',
+  templateUrl: './respiratorio.component.html',
+  styleUrls: ['./respiratorio.component.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule]
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule],
 })
-export class OlhosComponent {
+export class RespiratorioComponent {
+  readonly corrimento_nasal = [
+  "claro",
+  "esverdeado",
+  "ausente",
+  "nao_avaliado"];
   readonly opcoes = ["Sim", "Não", "Não avaliado"];
-  readonly dor = ["Olho esquerdo", "Olho direito", "Ambos os olhos", "Nenhum", "Não avaliado"];
+
+
 }
