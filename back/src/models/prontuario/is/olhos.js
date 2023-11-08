@@ -16,12 +16,7 @@ const olhos =  {
         sim: Boolean,
         nao_avaliado: Boolean
       },
-      dor: {
-        olho_esquerdo: Boolean,
-        olho_direito: Boolean,
-        ambos: Boolean,
-        nao_avaliado: Boolean
-      },
+      dor: String,
       acuidade_visual: {
         teste_do_olhinho_normal: Boolean,
         teste_do_olhinho_anormal: Boolean,

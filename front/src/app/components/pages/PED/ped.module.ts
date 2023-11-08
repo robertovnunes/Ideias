@@ -18,6 +18,7 @@ import {GeralComponent} from "./IS/geral/geral.component";
 import { ISComponent } from './is/is.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { OuvidosComponent } from './IS/ouvidos/ouvidos.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 
 @NgModule({
@@ -28,19 +29,20 @@ import { OuvidosComponent } from './IS/ouvidos/ouvidos.component';
     ISComponent,
     OuvidosComponent
   ],
-    imports: [
-        CommonModule,
-        PedRoutingModule,
-        MatStepperModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatButtonModule,
-        MatInputModule,
-        MatSelectModule,
-        InformanteComponent,
-        BrowserAnimationsModule,
-        GeralComponent,
-        MatExpansionModule,
-    ]
+  imports: [
+    CommonModule,
+    PedRoutingModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    InformanteComponent,
+    BrowserAnimationsModule,
+    GeralComponent,
+    MatExpansionModule,
+    MatSlideToggleModule,
+  ]
 })
 export class PedModule { }

@@ -2,7 +2,34 @@
   <form>
     <mat-form-field class="formItem">
       <mat-label>Dor</mat-label>
-
+      <mat-select formControlName="oe">
+        <mat-option value="oe">Olho esquerdo</mat-option>
+        <mat-option value="od">Olho direito</mat-option>
+        <mat-option value="ambos">Ambos</mat-option>
+        <mat-option value="nenhum">Nenhum</mat-option>
+        <mat-option value="nao-avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Secreção</mat-label>
+      <mat-select formControlName="secrecao">
+        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Infecções frequentes</mat-label>
+      <mat-select formControlName="infeccoes_frequentes">
+        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="acuidade formItem">
+      <mat-label>Acuidade auditiva</mat-label>
+      <mat-select class="acuidade">
+        <mat-option value="Selecione">Selecione</mat-option>
+        <mat-option  value="teste-olhinho-normal">Teste da orelhinha normal</mat-option>
+        <mat-option  value="teste-olhinho-anormal">Teste da orelhinha anormal</mat-option>
+        <mat-option value="nao-avaliado">Não avaliado</mat-option>
+      </mat-select>
     </mat-form-field>
   </form>
 </div>
