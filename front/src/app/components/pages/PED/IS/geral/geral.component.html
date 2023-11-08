@@ -1,39 +1,38 @@
-<h3>Prontuário Geral</h3>
 <div class="container">
-  <form>
-    <div class="febre">
-      <label for="febre">Febre</label>
-      <select id="febre">
-        <option value="sim">Sim</option>
-        <option value="nao">Não</option>
-        <option value="nao avaliado">Não avaliado</option>
-      </select>
-    </div>
-    <div class="peso">
-      <label for="peso">Tosse</label>
-      <select id="peso">
-        <option value="ganho">Ganho</option>
-        <option value="perda">Perda</option>
-        <option value="sem alteração">Sem alteração</option>
-        <option value="nao avaliado">Não avaliado</option>
-      </select>
-    </div>
-    <div class="apetite">
-      <label for="apetite">Apetite</label>
-      <select id="apetite">
-        <option value="falta">Falta</option>
-        <option value="excesso">Excesso</option>
-        <option value="normal">Normal</option>
-        <option value="nao avaliado">Não avaliado</option>
-      </select>
-    </div>
-    <div class="altura">
-      <label for="altura">Altura</label>
-      <input type="text" name="altura" id="altura" placeholder="Altura">
-    </div>
-    <div class="obs">
-      <label for="obs">Observações gerais</label>
-      <input type="text" name="obs" id="obs" placeholder="Observações gerais">
-    </div>
+  <form [formGroup]="geral">
+    <mat-form-field class="formItem">
+      <mat-label>Febre</mat-label>
+      <mat-select formControlName="febre">
+        <mat-option value="sim">Sim</mat-option>
+        <mat-option value="nao">Não</mat-option>
+        <mat-option value="nao avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="formItem">
+      <mat-label>Tosse</mat-label>
+      <mat-select formControlName="peso">
+        <mat-option value="ganho">Ganho</mat-option>
+        <mat-option value="perda">Perda</mat-option>
+        <mat-option value="sem alteração">Sem alteração</mat-option>
+        <mat-option value="nao avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="apetite">
+      <mat-label>Apetite</mat-label>
+      <mat-select formControlName="apetite">
+        <mat-option value="falta">Falta</mat-option>
+        <mat-option value="excesso">Excesso</mat-option>
+        <mat-option value="normal">Normal</mat-option>
+        <mat-option value="nao avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="altura">
+      <mat-label>Altura</mat-label>
+      <input matInput formControlName="altura" type="text" name="altura" id="altura" placeholder="Altura">
+    </mat-form-field>
+    <mat-form-field class="obs">
+      <mat-label>Observações gerais</mat-label>
+      <input matInput formControlName="obs" type="text" name="obs" id="obs" placeholder="Observações gerais">
+    </mat-form-field>
   </form>
 </div>

@@ -1,49 +1,71 @@
 <div class="container">
-  <h3>Informante</h3>
-  <form>
+  <form [formGroup]="informante">
     <div class="formItem">
-      <label for="name">Nome: </label>
-      <input type="text" id="name">
+      <mat-form-field class="formItem">
+        <mat-label>Nome:</mat-label>
+        <input matInput formControlName="nome" type="text" id="name">
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Sexo:</mat-label>
+        <mat-select formControlName="sexo" id="sexo">
+          <mat-option value="homem cis">homem cis</mat-option>
+          <mat-option value="mulher cis">mulher cis</mat-option>
+          <mat-option value="homem trans">homem trans</mat-option>
+          <mat-option value="mulher trans">mulher trans</mat-option>
+          <mat-option value="não-binário">não-binário</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-    <div class="formItem">
-      <label for="sexo">Sexo: </label>
-      <select id="sexo">
-        <option value="homem cis">homem cis</option>
-        <option value="mulher cis">mulher cis</option>
-        <option value="homem trans">homem trans</option>
-        <option value="mulher trans">mulher trans</option>
-        <option value="não-binário">não-binário</option>
-      </select>
+    <div class="formItem endereco">
+      <mat-label>Endereço:</mat-label>
+        <mat-form-field>
+          <mat-label>Logradouro:</mat-label>
+          <input matInput formControlName="endereco" type="text" id="logradouro" name="logradouro"
+                 placeholder="Logradouro">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Número:</mat-label>
+          <input matInput formControlName="numero" type="text" name="numero" id="numero" placeholder="Número">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>CEP:</mat-label>
+          <input matInput type="text" formControlName="cep" name="cep" id="cep" placeholder="CEP">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Complemento:</mat-label>
+          <input matInput formControlName="complemento" type="text" name="complemento" id="complemento"
+                 placeholder="Complemento">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Bairro:</mat-label>
+          <input matInput formControlName="bairro" type="text" name="bairro" id="bairro" placeholder="Bairro">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Cidade:</mat-label>
+          <input matInput formControlName="cidade" type="text" name="cidade" id="cidade" placeholder="Cidade">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Estado:</mat-label>
+          <mat-select formControlName="estado" id="estados">
+            <mat-option value="">Selecione</mat-option>
+            <mat-option *ngFor="let estado of this.estados" value="{{estado}}">{{estado}}</mat-option>
+          </mat-select>
+        </mat-form-field>
     </div>
-    <div class="formItem">
-      <label for="endereco">Endereço: </label>
-      <div id="endereco">
-        <label for="logradouro">Logradouro: </label>
-        <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro">
-        <label for="numero">Número: </label>
-        <input type="text" name="numero" id="numero" placeholder="Número">
-        <label for="cep">CEP: </label>
-        <input type="text" name="cep" id="cep" placeholder="CEP">
-        <label for="complemento">Complemento: </label>
-        <input type="text" name="complemento" id="complemento" placeholder="Complemento">
-        <label for="bairro">Bairro: </label>
-        <input type="text" name="bairro" id="bairro" placeholder="Bairro">
-        <label for="cidade">Cidade: </label>
-        <input type="text" name="cidade" id="cidade" placeholder="Cidade">
-        <label for="estados">Estado: </label>
-        <select id="estados">
-          <option value="">Selecione</option>
-          <option *ngFor="let estado of this.estados" value="{{estado}}">{{estado}}</option>
-        </select>
-      </div>
-    </div>
-    <div class="formItem">
-    <label for="escolaridade">Escolaridade: </label>
-    <input type="text" name="escolaridade" id="escolaridade" placeholder="Escolaridade">
-    <label for="parentesco">Parentesco: </label>
-    <input type="text" name="parentesco" id="parentesco" placeholder="Parentesco">
-    <label for="obs">Observação: </label>
-    <input type="text" name="obs" id="obs" placeholder="obs">
+    <div class="formItem outras">
+      <mat-form-field>
+        <mat-label>Escolaridade:</mat-label>
+        <mat-select formControlName="escolaridade" id="escolaridade">
+          <mat-option *ngFor="let item of this.escolaridade" value="{{item}}">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Parentesco:</mat-label>
+        <input matInput formControlName="parentesco" type="text" name="parentesco" id="parentesco"
+               placeholder="Parentesco"></mat-form-field>
+      <mat-form-field>
+        <mat-label>Observação:</mat-label>
+        <textarea matInput formControlName="obs" name="obs" id="obs" placeholder="obs"></textarea></mat-form-field>
     </div>
   </form>
 </div>

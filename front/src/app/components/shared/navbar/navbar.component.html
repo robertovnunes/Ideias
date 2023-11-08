@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <title>IDEIAS</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="navbar.component.css">
-</head>
-<body>
+
 <nav class="navbar">
-  <a routerLink="/home">IDEIAS</a>
+  <a routerLink="/home" class="brand-logo">IDEIAS</a>
   <div class="menu">
     <a routerLink="/blog" class="">Blog</a>
     <div *ngIf="isLogedIn" class="dropdown">
-      <a>Prontuarios</a>
+      <a class="dropdown-head">Prontuarios</a>
       <ul class="dropdown-content">
-        <li><a routerLink="/pediatrico">Pediatrico</a></li>
+        <li><a routerLink="/ped">Pediatrico</a></li>
       </ul>
     </div>
     <a *ngIf="isLogedIn" routerLink="/profile" class="menu-item">Perfil</a>
@@ -22,4 +14,4 @@
     <a routerLink="/logout" *ngIf="isLogedIn" (click)="alert('sair')" class="menu-item">Sair</a>
   </div>
 </nav>
-</body>
+

@@ -1,0 +1,17 @@
+<h1>Prontuario de pediatria</h1>
+<mat-stepper>
+  <mat-step label="Informante">
+    <app-informante></app-informante>
+    <div>
+      <button mat-button matStepperNext>Geral</button>
+    </div>
+  </mat-step>
+  <mat-step label="Geral">
+    <app-geral></app-geral>
+    <div>
+      <button mat-button matStepperNext>Geral</button>
+      <button mat-button matStepperPrevious>Informante</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+

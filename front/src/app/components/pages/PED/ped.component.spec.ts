@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProntuarioComponent } from './prontuario.component';
+import { PedComponent } from './ped.component';
 
 describe('ProntuarioComponent', () => {
-  let component: ProntuarioComponent;
-  let fixture: ComponentFixture<ProntuarioComponent>;
+  let component: PedComponent;
+  let fixture: ComponentFixture<PedComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProntuarioComponent]
+      declarations: [PedComponent]
     });
-    fixture = TestBed.createComponent(ProntuarioComponent);
+    fixture = TestBed.createComponent(PedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
