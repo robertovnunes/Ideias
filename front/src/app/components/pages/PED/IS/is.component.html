@@ -1,0 +1,36 @@
+<mat-stepper>
+  <mat-step label="Informante">
+    <app-informante></app-informante>
+    <div class="navButton">
+      <button mat-button matStepperNext>Geral</button>
+    </div>
+  </mat-step>
+  <mat-step label="Geral">
+    <app-geral></app-geral>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Informante</button>
+      <button mat-button matStepperNext>Pele</button>
+    </div>
+  </mat-step>
+  <mat-step label="Pele">
+    <app-pele></app-pele>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Geral</button>
+      <button mat-button matStepperNext>Olhos</button>
+    </div>
+  </mat-step>
+  <mat-step label="Olhos">
+    <app-olhos></app-olhos>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Pele</button>
+      <button mat-button matStepperNext>Ouvidos</button>
+    </div>
+  </mat-step>
+  <mat-step label="Ouvidos">
+    <app-ouvidos></app-ouvidos>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Olhos</button>
+      <button mat-button matStepperNext>Nariz</button>
+    </div>
+  </mat-step>
+</mat-stepper>

@@ -7,6 +7,17 @@
   box-sizing: border-box;
 }
 
+.obs {
+  width: 90%;
+  height: 20%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 .formItem{
   width: 90%;
   height: 80%;
@@ -16,12 +27,6 @@
   flex-direction: column;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.endereco {
-  display: flex;
-  flex-direction: column;
-
 }
 
 .formItem input {

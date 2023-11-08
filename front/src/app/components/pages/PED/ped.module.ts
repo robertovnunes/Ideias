@@ -15,26 +15,32 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {GeralComponent} from "./IS/geral/geral.component";
+import { ISComponent } from './is/is.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import { OuvidosComponent } from './IS/ouvidos/ouvidos.component';
 
 
 @NgModule({
   declarations: [
     OlhosComponent,
     PeleComponent,
-    PedComponent
+    PedComponent,
+    ISComponent,
+    OuvidosComponent
   ],
-  imports: [
-    CommonModule,
-    PedRoutingModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    InformanteComponent,
-    BrowserAnimationsModule,
-    GeralComponent,
-  ]
+    imports: [
+        CommonModule,
+        PedRoutingModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        InformanteComponent,
+        BrowserAnimationsModule,
+        GeralComponent,
+        MatExpansionModule,
+    ]
 })
 export class PedModule { }
