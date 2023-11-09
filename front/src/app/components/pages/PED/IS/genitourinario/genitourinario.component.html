@@ -1,0 +1,46 @@
+<div class="container">
+  <form>
+    <div class="urina">
+      <h2>Urina</h2>
+      <mat-form-field class="formItem">
+        <mat-label>Quantidade</mat-label>
+        <mat-select formControlName="quantidade">
+          <mat-option *ngFor="let opcao for urina.quantidade" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Jato</mat-label>
+        <mat-select formControlName="jato">
+          <mat-option *ngFor="let opcao for urina.jato" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Cor</mat-label>
+        <mat-select formControlName="cor">
+          <mat-option *ngFor="let opcao for urina.cor" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Atividade sexual</mat-label>
+        <mat-select formControlName="atividadeSexual">
+          <mat-option *ngFor="let opcao for opcoes" value="{{opcao}}">{{opcao}}</mat-option>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Frequencia</mat-label>
+        <mat-select formControlName="frequencia">
+          <mat-option *ngFor="let opcao for urina.frequencia" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Urgencia</mat-label>
+        <mat-select formControlName="urgencia">
+          <mat-option *ngFor="let opcao for opcoes" value="{{opcao}}">{{opcao}}</mat-option>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Disuria</mat-label>
+        <mat-select formControlName="disuria">
+          <mat-option *ngFor="let opcao for opcoes" value="{{opcao}}">{{opcao}}</mat-option>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

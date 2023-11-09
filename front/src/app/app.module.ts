@@ -37,7 +37,6 @@ import {PedModule} from "./components/pages/PED/ped.module";
     HttpClientModule,
     FormsModule,
     NgIf,
-    //PedRoutingModule,
     PedModule
   ],
   providers: [],

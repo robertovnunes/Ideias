@@ -21,6 +21,7 @@ import { OuvidosComponent } from './IS/ouvidos/ouvidos.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { RespiratorioComponent } from './IS/respiratorio/respiratorio.component';
 import { CardiovascularComponent } from './IS/cardiovascular/cardiovascular.component';
+import { GastrointestinalComponent } from './IS/gastrointestinal/gastrointestinal.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { CardiovascularComponent } from './IS/cardiovascular/cardiovascular.comp
     RespiratorioComponent,
     OuvidosComponent,
     OlhosComponent,
+    GastrointestinalComponent
   ]
 })
 export class PedModule { }
