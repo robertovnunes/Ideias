@@ -282,10 +282,10 @@
           "nao_avaliado": "Boolean"
         },
         "historico_menstrual": {
-          "menstruacao": {
-            "presente": "Boolean",
-            "nao_avaliado": "Boolean"
-          }
+          "menstruacao": ["presente", "ausente", "nao_avaliado"],
+          "menarca": ["< 8 anos", "8-16 anos", "> 16 anos", "nao_avaliado"],
+          "Regularidade": ["< 28 dias", "28 dias", "> 28 dias", "Não avaliado"],
+          "Fluxo": ["Normal", "Aumentado", "Diminuído", "Não avaliado"]
         }
       },
       "genital_masculino": {
