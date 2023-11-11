@@ -1,8 +1,8 @@
 <div class="container">
-  <form>
+  <form [formGroup]="ouvidos">
     <mat-form-field class="formItem">
       <mat-label>Dor</mat-label>
-      <mat-select formControlName="oe">
+      <mat-select formControlName="dor">
         <mat-option value="oe">Ouvido esquerdo</mat-option>
         <mat-option value="od">Ouvido direito</mat-option>
         <mat-option value="ambos">Ambos</mat-option>
@@ -24,7 +24,7 @@
     </mat-form-field>
     <mat-form-field class="acuidade formItem">
       <mat-label>Acuidade auditiva</mat-label>
-      <mat-select class="acuidade">
+      <mat-select formControlName="acuidade">
         <mat-option value="Selecione">Selecione</mat-option>
         <mat-option  value="teste-olhinho-normal">Teste da orelhinha normal</mat-option>
         <mat-option  value="teste-olhinho-anormal">Teste da orelhinha anormal</mat-option>

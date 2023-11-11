@@ -1,38 +1,38 @@
 <div class="container">
-  <form>
+  <form [formGroup]="olhos">
     <mat-form-field class="fotofobia formItem">
       <mat-label>Fotofobia</mat-label>
-      <mat-select class="fotofobia">
+      <mat-select formControlName="fotofobia">
         <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="lacrimejando formItem">
       <mat-label>Lacrimejando</mat-label>
-      <mat-select class="lacrimejando">
+      <mat-select formControlName="lacrimejando">
         <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="edema formItem">
       <mat-label>Edema</mat-label>
-      <mat-select class="edema">
+      <mat-select formControlName="edema">
         <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="secrecao formItem">
       <mat-label>Secreção</mat-label>
-      <mat-select class="secrecao">
+      <mat-select formControlName="secrecao">
         <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="dor formItem">
       <mat-label>Dor</mat-label>
-      <mat-select class="dor">
+      <mat-select formControlName="dor">
         <mat-option *ngFor="let item of dor" value="{{item}}">{{item}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="acuidade formItem">
       <mat-label>Acuidade visual</mat-label>
-      <mat-select class="acuidade">
+      <mat-select formControlName="acuidade">
         <mat-option value="Selecione">Selecione</mat-option>
         <mat-option  value="teste-olhinho-normal">Teste do olhinho normal</mat-option>
         <mat-option  value="teste-olhinho-anormal">Teste do olhinho anormal</mat-option>
