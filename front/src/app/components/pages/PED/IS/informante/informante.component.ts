@@ -45,8 +45,7 @@ export class InformanteComponent  implements OnInit{
        escolaridade: ['', Validators.required],
        parentesco: ['', Validators.required],
        obs: [''],
-     });
-   }
+     });   }
    estados = [
     "Acre",
     "Alagoas",
@@ -76,5 +75,6 @@ export class InformanteComponent  implements OnInit{
     "Sergipe",
     "Tocantins",
   ];
+
 
 }

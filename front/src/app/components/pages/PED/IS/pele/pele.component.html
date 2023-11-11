@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form [formGroup]="pele">
     <mat-form-field class="rash formItem">
       <mat-label>Rash</mat-label>
       <mat-select formControlName="rash">
@@ -22,9 +22,6 @@
         <mat-option value="Não">Não</mat-option>
         <mat-option value="não avaliado">Não avaliado</mat-option>
       </mat-select>
-    </mat-form-field>
-    <mat-form-field class="obs formItem">
-      <textarea matInput formControlName="obs" placeholder="Observação"></textarea>
     </mat-form-field>
   </form>
 </div>
