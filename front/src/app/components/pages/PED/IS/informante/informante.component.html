@@ -3,11 +3,11 @@
     <div class="formItem">
       <mat-form-field class="formItem">
         <mat-label>Nome:</mat-label>
-        <input matInput formControlName="nome" type="text" id="name">
+        <input matInput formControlName="nome" type="text" id="name" name="nome">
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Sexo:</mat-label>
-        <mat-select formControlName="sexo" id="sexo">
+        <mat-select formControlName="sexo" id="sexo" name="sexo">
           <mat-option value="homem cis">homem cis</mat-option>
           <mat-option value="mulher cis">mulher cis</mat-option>
           <mat-option value="homem trans">homem trans</mat-option>
@@ -46,7 +46,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Estado:</mat-label>
-          <mat-select formControlName="estado" id="estados">
+          <mat-select formControlName="uf" id="uf" name="uf">
             <mat-option value="">Selecione</mat-option>
             <mat-option *ngFor="let estado of this.estados" value="{{estado}}">{{estado}}</mat-option>
           </mat-select>

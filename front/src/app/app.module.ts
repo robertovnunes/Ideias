@@ -16,6 +16,7 @@ import {LoginComponent} from './components/pages/login/login.component';
 import {ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
 import {PedModule} from "./components/pages/PED/ped.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {PedModule} from "./components/pages/PED/ped.module";
     HttpClientModule,
     FormsModule,
     NgIf,
-    PedModule
+    PedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   exports: [

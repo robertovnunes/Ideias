@@ -97,8 +97,8 @@ export class GenitourinarioComponent implements OnInit {
   corrimento_vaginal_presente!: FormGroup;
   genital_feminino!: FormGroup;
   genital_masculino!: FormGroup;
-  isFem = this.checkIsFem();
-  isMasc = this.checkIsMasc();
+  isFem!: boolean;
+  isMasc !: boolean;
   corrimentoPresente = this.checkCorrimento();
 
   constructor(readonly formBuilder: FormBuilder) {
@@ -106,7 +106,7 @@ export class GenitourinarioComponent implements OnInit {
 
   ngOnInit() {
     this.femmasc = this.formBuilder.group({
-      genital: ['', Validators.required]
+      genital: ['']
     });
     this.urina = this.formBuilder.group({
       quantidade: ['', Validators.required],
@@ -153,15 +153,15 @@ export class GenitourinarioComponent implements OnInit {
   }
 
   checkIsFem() {
-    return this.femmasc.value.mascfem === 'feminino';
+
+    return true;
   }
 
   checkIsMasc() {
-    return this.femmasc.value.mascfem === 'masculino';
+    return true;
   }
 
   private checkCorrimento() {
-    return this.genital_feminino.value.corrimento.presente === 'presente' ||
-      this.urina.value.corrimento.presente === 'presente';
+    return true
   }
 }

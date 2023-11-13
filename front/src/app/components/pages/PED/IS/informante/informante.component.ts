@@ -40,7 +40,7 @@ export class InformanteComponent  implements OnInit{
        bairro: ['', Validators.required],
        cidade: ['', Validators.required],
        numero: ['', Validators.required],
-       estado: ['', Validators.required],
+       uf: ['', Validators.required],
        cep: ['', Validators.required],
        escolaridade: ['', Validators.required],
        parentesco: ['', Validators.required],

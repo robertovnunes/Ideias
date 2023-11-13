@@ -25,8 +25,8 @@ export class CardiovascularComponent implements OnInit{
 
   ngOnInit(): void {
     this.cardiovascular = this.formBuilder.group({
-      dispneia: ['', Validators.required],
-      palp: ['', Validators.required],
+      dispineia: ['', Validators.required],
+      palpitacao: ['', Validators.required],
       cianose: ['', Validators.required],
       taquicardia: ['', Validators.required]
     });

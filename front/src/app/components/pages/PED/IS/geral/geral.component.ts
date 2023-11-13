@@ -4,7 +4,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {NgForOf} from "@angular/common";
 import {MatStepperModule} from "@angular/material/stepper";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators
+} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 
 @Component({
@@ -21,12 +28,12 @@ export class GeralComponent implements OnInit{
 
   ngOnInit(): void {
     this.geral = this.formBuilder.group({
-      febre: ['', Validators.required],
-      peso: ['', Validators.required],
-      atividade: ['', Validators.required],
-      apetite: ['', Validators.required],
-      altura: ['', Validators.required],
-      obs: ['', Validators.required],
+      febre: new FormControl('', Validators.required),
+      peso: new FormControl('', Validators.required),
+      atividade: new FormControl('', Validators.required),
+      apetite: new FormControl('', Validators.required),
+      altura: new FormControl('', Validators.required),
+      obs: new FormControl('', Validators.required),
     });
   }
 

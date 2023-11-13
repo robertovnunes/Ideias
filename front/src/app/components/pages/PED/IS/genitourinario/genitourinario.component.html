@@ -1,13 +1,14 @@
 <div class="container">
   <form [formGroup]="genitourinario">
-    <mat-form-field class="formItem">
-      <mat-label>Feminino/Masculino:</mat-label>
-      <mat-select formControlName="genital">
-        <mat-option value="feminino">Genital feminino</mat-option>
-        <mat-option value="masculino">Genital masculino</mat-option>
-        <mat-option value="intersexo">Intessexo</mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div [formGroup]="femmasc" >
+      <mat-form-field class="formItem">
+        <mat-label>Feminino/Masculino:</mat-label>
+        <mat-select formControlName="genital">
+          <mat-option value="feminino">Genital feminino</mat-option>
+          <mat-option value="masculino">Genital masculino</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     <div [formGroup]="urina" class="urina">
       <h2>Urina</h2>
       <mat-form-field class="formItem">
