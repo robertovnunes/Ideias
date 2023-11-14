@@ -23,6 +23,7 @@ import {RespiratorioComponent} from './IS/respiratorio/respiratorio.component';
 import {CardiovascularComponent} from './IS/cardiovascular/cardiovascular.component';
 import {GastrointestinalComponent} from './IS/gastrointestinal/gastrointestinal.component';
 import {GenitourinarioComponent} from "./IS/genitourinario/genitourinario.component";
+import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqueletico.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {GenitourinarioComponent} from "./IS/genitourinario/genitourinario.compon
     GastrointestinalComponent,
     CardiovascularComponent,
     GenitourinarioComponent,
-    PeleComponent
+    PeleComponent,
+    MusculoesqueleticoComponent
   ]
 })
 export class PedModule {
