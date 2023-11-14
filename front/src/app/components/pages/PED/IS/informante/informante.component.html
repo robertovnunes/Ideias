@@ -1,71 +1,82 @@
 <div class="container">
-  <form [formGroup]="informante">
-    <div class="formItem">
-      <mat-form-field class="formItem">
-        <mat-label>Nome:</mat-label>
-        <input matInput formControlName="nome" type="text" id="name" name="nome">
-      </mat-form-field>
-      <mat-form-field class="formItem">
-        <mat-label>Sexo:</mat-label>
-        <mat-select formControlName="sexo" id="sexo" name="sexo">
-          <mat-option value="homem cis">homem cis</mat-option>
-          <mat-option value="mulher cis">mulher cis</mat-option>
-          <mat-option value="homem trans">homem trans</mat-option>
-          <mat-option value="mulher trans">mulher trans</mat-option>
-          <mat-option value="não-binário">não-binário</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="formItem endereco">
-      <mat-label>Endereço:</mat-label>
+  <form [formGroup]="informante" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="formItem">
+        <mat-form-field class="formItem">
+          <mat-label>Nome:</mat-label>
+          <input matInput class="form-control" formControlName="nome" type="text" id="nome" name="nome">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Sexo:</mat-label>
+          <mat-select class="form-control" formControlName="sexo" id="sexo" name="sexo">
+            <mat-option value="" >Selecione</mat-option>
+            <mat-option value="homem cis">homem cis</mat-option>
+            <mat-option value="mulher cis">mulher cis</mat-option>
+            <mat-option value="homem trans">homem trans</mat-option>
+            <mat-option value="mulher trans">mulher trans</mat-option>
+            <mat-option value="não-binário">não-binário</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="formItem endereco">
+        <h3>Endereço:</h3>
         <mat-form-field>
           <mat-label>Logradouro:</mat-label>
-          <input matInput formControlName="endereco" type="text" id="logradouro" name="logradouro"
+          <input matInput class="form-control" formControlName="logradouro" type="text" name="logradouro" id="logradouro"
                  placeholder="Logradouro">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Número:</mat-label>
-          <input matInput formControlName="numero" type="text" name="numero" id="numero" placeholder="Número">
+          <input matInput class="form-control" formControlName="numero" type="text" name="numero" id="numero" placeholder="Número">
         </mat-form-field>
         <mat-form-field>
           <mat-label>CEP:</mat-label>
-          <input matInput type="text" formControlName="cep" name="cep" id="cep" placeholder="CEP">
+          <input matInput type="text" class="form-control" formControlName="cep" name="cep" id="cep" placeholder="CEP">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Complemento:</mat-label>
-          <input matInput formControlName="complemento" type="text" name="complemento" id="complemento"
+          <input matInput class="form-control" formControlName="complemento" type="text" name="complemento" id="complemento"
                  placeholder="Complemento">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Bairro:</mat-label>
-          <input matInput formControlName="bairro" type="text" name="bairro" id="bairro" placeholder="Bairro">
+          <input matInput class="form-control" formControlName="bairro" type="text" name="bairro" id="bairro" placeholder="Bairro">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Cidade:</mat-label>
-          <input matInput formControlName="cidade" type="text" name="cidade" id="cidade" placeholder="Cidade">
+          <input matInput class="form-control" formControlName="cidade" type="text" name="cidade" id="cidade" placeholder="Cidade">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Estado:</mat-label>
-          <mat-select formControlName="uf" id="uf" name="uf">
+          <mat-select class="form-control" formControlName="uf" id="uf" name="uf">
             <mat-option value="">Selecione</mat-option>
             <mat-option *ngFor="let estado of this.estados" value="{{estado}}">{{estado}}</mat-option>
           </mat-select>
         </mat-form-field>
-    </div>
-    <div class="formItem outras">
-      <mat-form-field>
-        <mat-label>Escolaridade:</mat-label>
-        <mat-select formControlName="escolaridade" id="escolaridade">
-          <mat-option *ngFor="let item of this.escolaridade" value="{{item}}">{{item}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Parentesco:</mat-label>
-        <input matInput formControlName="parentesco" type="text" name="parentesco" id="parentesco"
-               placeholder="Parentesco"></mat-form-field>
-      <mat-form-field>
-        <mat-label>Observação:</mat-label>
-        <textarea matInput formControlName="obs" id="obs" placeholder="obs"></textarea></mat-form-field>
+      </div>
+      <div class="formItem outras">
+        <mat-form-field>
+          <mat-label>Escolaridade:</mat-label>
+          <mat-select class="form-control" formControlName="escolaridade" id="escolaridade">
+            <mat-option value="" >Selecione</mat-option>
+            <mat-option *ngFor="let item of this.escolaridade" value="{{item}}">{{item}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Parentesco:</mat-label>
+          <input matInput class="form-control" formControlName="parentesco" type="text" name="parentesco" id="parentesco"
+                 placeholder="Parentesco"></mat-form-field>
+        <mat-form-field>
+          <mat-label>Observação:</mat-label>
+          <textarea matInput class="form-control" formControlName="obs" id="obs" placeholder="obs"></textarea></mat-form-field>
+      </div>
     </div>
   </form>
+  <pre>
+    {{informante.value | json}}
+  </pre>
+  <pre>
+    {{informante.status | json}}
+  </pre>
+
 </div>
