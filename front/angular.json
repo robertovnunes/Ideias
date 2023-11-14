@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "plataforma-ideias:build:production"
+              "buildTarget": "plataforma-ideias:build:production"
             },
             "development": {
-              "browserTarget": "plataforma-ideias:build:development"
+              "buildTarget": "plataforma-ideias:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "plataforma-ideias:build"
+            "buildTarget": "plataforma-ideias:build"
           }
         },
         "test": {
