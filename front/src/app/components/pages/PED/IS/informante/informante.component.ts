@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { NgForOf} from "@angular/common";
+import {JsonPipe, NgForOf} from "@angular/common";
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -12,7 +12,7 @@ import {MatButtonModule} from "@angular/material/button";
   templateUrl: './informante.component.html',
   styleUrls: ['./informante.component.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule, JsonPipe],
 })
 export class InformanteComponent  implements OnInit{
   informante!: FormGroup;
@@ -32,20 +32,8 @@ export class InformanteComponent  implements OnInit{
   constructor(private formBuilder: FormBuilder) { }
 
    ngOnInit(): void {
-     this.informante = this.formBuilder.group({
-       nome: ['', Validators.required],
-       sexo: ['', Validators.required],
-       endereco: ['', Validators.required],
-       complemento: ['', Validators.required],
-       bairro: ['', Validators.required],
-       cidade: ['', Validators.required],
-       numero: ['', Validators.required],
-       uf: ['', Validators.required],
-       cep: ['', Validators.required],
-       escolaridade: ['', Validators.required],
-       parentesco: ['', Validators.required],
-       obs: [''],
-     });   }
+     this.informante = this.createForm();
+  }
    estados = [
     "Acre",
     "Alagoas",
@@ -75,6 +63,24 @@ export class InformanteComponent  implements OnInit{
     "Sergipe",
     "Tocantins",
   ];
-
+  onSubmit (){
+    console.log(this.informante.value);
+}
+createForm(): FormGroup {
+  return this.formBuilder.group({
+    nome: ['', Validators.required],
+    sexo: ['', Validators.required],
+    endereco: ['', Validators.required],
+    complemento: ['', Validators.required],
+    bairro: ['', Validators.required],
+    cidade: ['', Validators.required],
+    numero: ['', Validators.required],
+    uf: ['', Validators.required],
+    cep: ['', Validators.required],
+    escolaridade: ['', Validators.required],
+    parentesco: ['', Validators.required],
+    obs: [''],
+  });
+}
 
 }
