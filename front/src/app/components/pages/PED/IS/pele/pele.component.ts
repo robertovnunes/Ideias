@@ -39,8 +39,7 @@ export class PeleComponent implements OnInit{
     this.pele = this.formBuilder.group({
       rash: ['',],
       ictericia: ['',],
-      cianose: ['',],
-      repeticao: ['',],
+      infeccoesrepeticao: ['',],
     });
   }
 }

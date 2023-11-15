@@ -30,18 +30,18 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
-        <label>Evacuação</label>
-        <select formControlName="evacuacao" id="evacuacao" name="evacuacao">
-          <option value="">Selecione</option>
-          <option *ngFor="let opcao of evacuacao" value="{{opcao}}">{{opcao}}</option>
-        </select>
+        <mat-label>Evacuação</mat-label>
+        <mat-select formControlName="evacuacao" id="evacuacao" name="evacuacao">
+          <mat-option value="">Selecione</mat-option>
+          <mat-option *ngFor="let opcao of evacuacao" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
-        <label>Aspecto das fezes</label>
-        <select formControlName="aspectofezes" id="aspectofezes" name="aspectofezes">
-          <option value="">Selecione</option>
-          <option *ngFor="let opcao of aspecto" value="{{opcao}}">{{opcao}}</option>
-        </select>
+        <mat-label>Aspecto das fezes</mat-label>
+        <mat-select formControlName="aspectofezes" id="aspectofezes" name="aspectofezes">
+          <mat-option value="">Selecione</mat-option>
+          <mat-option *ngFor="let opcao of aspecto" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
   </form>

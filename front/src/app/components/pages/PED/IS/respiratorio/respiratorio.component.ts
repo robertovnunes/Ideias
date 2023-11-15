@@ -23,17 +23,25 @@ export class RespiratorioComponent implements OnInit{
   "nao_avaliado"];
   readonly opcoes = ["Sim", "Não", "Não avaliado"];
   readonly tipo = ["produtiva", "seca", "Não avaliado"];
-  tosse!: FormGroup;
   respiratorio!: FormGroup;
 
   constructor(readonly formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.tosse = this.formBuilder.group({
-      naoavaliado: [false, Validators.required],
-      duracao:['', Validators.required],
-      tipo: ['', Validators.required],
-      periodo: ['', Validators.required]
+    this.respiratorio = this.formBuilder.group({
+      corrimento: [''],
+      sftosse_alimentacao: [''],
+      epistaxe: [''],
+      tosse: this.formBuilder.group({
+        tossenaoavaliado: [false, Validators.required],
+        duracao:[''],
+        tipo: [''],
+        periodo: ['']
+      }),
+      resfriados_frequentes: [''],
+      dor_toracica: [''],
+      dificuldade_respiratoria: [''],
+      hemoptise: ['']
     });
   }
 

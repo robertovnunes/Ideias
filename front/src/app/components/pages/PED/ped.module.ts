@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import { JsonPipe} from "@angular/common";
 
 import {PedRoutingModule} from './ped.routing.module';
 
@@ -33,6 +34,7 @@ import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqu
   ],
   imports: [
     CommonModule,
+    JsonPipe,
     PedRoutingModule,
     MatStepperModule,
     ReactiveFormsModule,
@@ -53,6 +55,15 @@ import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqu
     GenitourinarioComponent,
     PeleComponent,
     MusculoesqueleticoComponent
+  ],
+  exports: [
+    MatInputModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
   ]
 })
 export class PedModule {

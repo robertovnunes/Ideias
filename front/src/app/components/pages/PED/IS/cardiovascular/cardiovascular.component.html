@@ -2,13 +2,15 @@
   <form [formGroup]="cardiovascular">
     <div class="form-group">
       <mat-form-field class="formItem">
+        <mat-label>Dispineia</mat-label>
         <mat-select formControlName="dispineia">
-          <mat-option *ngFor="let item of opcoes" [value]="item">
+          <mat-option *ngFor="let item of opcoes.getOpcoes1()" [value]="item">
             {{item}}
           </mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
+        <mat-label>Cianose</mat-label>
         <mat-select formControlName="cianose">
           <mat-option *ngFor="let item of cianose" value="{{item}}">
             {{item}}
@@ -16,15 +18,17 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
+        <mat-label>Palpitação</mat-label>
         <mat-select formControlName="palpitacao">
-          <mat-option *ngFor="let item of opcoes" [value]="item">
+          <mat-option *ngFor="let item of opcoes.getOpcoes1()" [value]="item">
             {{item}}
           </mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
+        <mat-label>Taquicardia</mat-label>
         <mat-select formControlName="taquicardia">
-          <mat-option *ngFor="let item of opcoes" [value]="item">
+          <mat-option *ngFor="let item of opcoes.getOpcoes1()" [value]="item">
             {{item}}
           </mat-option>
         </mat-select>

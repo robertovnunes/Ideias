@@ -1,84 +1,78 @@
 <div class="container">
   <form [formGroup]="genitourinario">
-    <div [formGroup]="femmasc" >
-      <mat-form-field class="formItem">
-        <mat-label>Feminino/Masculino:</mat-label>
-        <mat-select formControlName="genital">
-          <mat-option value="feminino">Genital feminino</mat-option>
-          <mat-option value="masculino">Genital masculino</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
     <div [formGroup]="urina" class="urina">
       <h2>Urina</h2>
       <mat-form-field class="formItem">
         <mat-label>Quantidade</mat-label>
-        <mat-select formControlName="quantidade">
+        <mat-select formControlName="quantidade" id="quantidade" name="quantidade">
           <mat-option *ngFor="let opcao of urinaop.quantidade" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Jato</mat-label>
-        <mat-select formControlName="jato">
+        <mat-select formControlName="jato" id="jato" name="jato">
           <mat-option *ngFor="let opcao of urinaop.jato" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Cor</mat-label>
-        <mat-select formControlName="cor">
+        <mat-select formControlName="corurina" id="corurina" name="corurina">
           <mat-option *ngFor="let opcao of urinaop.cor" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Frequencia</mat-label>
-        <mat-select formControlName="frequencia">
+        <mat-select formControlName="frequencia" id="frequencia" name="frequencia">
           <mat-option *ngFor="let opcao of urinaop.frequencia" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Urgencia</mat-label>
-        <mat-select formControlName="urgencia">
+        <mat-select formControlName="urgencia" id="urgencia" name="urgencia">
           <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <mat-form-field class="formItem">
       <mat-label>Atividade sexual</mat-label>
-      <mat-select formControlName="atividadeSexual">
+      <mat-select formControlName="atividadesexual" id="atividadesexual" name="atividadesexual">
         <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="formItem">
       <mat-label>Disuria</mat-label>
-      <mat-select formControlName="disuria">
+      <mat-select formControlName="disuria" id="disuria" name="disuria">
         <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
       </mat-select>
     </mat-form-field>
-    <div *ngIf="corrimentoPresente" class="corrimento">
+    <mat-form-field  class="formItem">
+      <mat-label>Corrimento</mat-label>
+      <mat-checkbox formControlName="corrimento" id="corrimentopresente" name="corrimentopresente">Presente</mat-checkbox>
+    </mat-form-field>
+    <div *ngIf="corrimentoPresente" formGroupName="corrimento_vaginal_presente" class="corrimento">
       <h2>Corrimento</h2>
-      <mat-checkbox formControlName="presente">Presente</mat-checkbox>
       <mat-form-field class="formItem">
         <mat-label>Cor</mat-label>
-        <mat-select formControlName="cor">
+        <mat-select formControlName="cor" id="cor" name="cor">
           <mat-option *ngFor="let opcao of corrimento.cor" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Odor</mat-label>
-        <mat-select formControlName="odor">
+        <mat-select formControlName="odor" id="odor" name="odor">
           <mat-option *ngFor="let opcao of corrimento.odor" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <div *ngIf="isFem" class="genital-feminino">
+    <div *ngIf="isFem" [formGroup]="genital_feminino" class="genital-feminino">
       <h2>Genital Feminino</h2>
-      <div class="corrimento">
-        <mat-form-field class="formItem">
+      <mat-form-field class="corrimento">
+        <div class="formItem" >
           <mat-label>corrimento</mat-label>
-          <mat-select *ngIf="corrimentoPresente" formControlName="corrimento">
+          <mat-select  formControlName="corrimento" id="" name="">
             <mat-option *ngFor="let opcao of genitalfeminino.corrimento_vaginal" value="{{opcao}}">{{opcao}}</mat-option>
           </mat-select>
-        </mat-form-field>
+        </div>
         <mat-form-field class="formItem">
           <mat-label>Cor</mat-label>
           <mat-select formControlName="cor">
@@ -97,7 +91,7 @@
             <mat-option *ngFor="let opcao of genitalfeminino.corrimento_vaginal_presente.prurido" value="{{opcao}}">{{opcao}}</mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
+      </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Telarca</mat-label>
         <mat-select formControlName="telarca">
@@ -138,7 +132,7 @@
         </mat-form-field>
       </div>
     </div>
-    <div *ngIf="isMasc" class="genital-masculino">
+    <div *ngIf="isMasc" [formGroup]="genital_masculino" class="genital-masculino">
       <h2>Genital Masculino</h2>
       <mat-form-field class="formItem">
         <mat-label>Pubarca</mat-label>
@@ -164,15 +158,15 @@
           <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field class="formItem">
+      <div class="formItem">
         <mat-label>Poluções</mat-label>
         <mat-select formControlName="poluções">
           <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
-      </mat-form-field>
+      </div>
     </div>
   </form>
   <pre>
-    {{genitourinario | json }}
+    {{genitourinario.parent | json }}
   </pre>
 </div>

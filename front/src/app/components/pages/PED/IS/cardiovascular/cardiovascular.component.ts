@@ -6,6 +6,7 @@ import {JsonPipe, NgForOf} from "@angular/common";
 import {MatStepperModule} from "@angular/material/stepper";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
+import {OpcoesService} from "../../services/opcoes.service";
 
 @Component({
   selector: 'app-cardiovascular',
@@ -18,10 +19,10 @@ import {MatButtonModule} from "@angular/material/button";
 export class CardiovascularComponent implements OnInit{
   cardiovascular!: FormGroup;
 
-  readonly opcoes = ["Sim", "Não", "Não avaliado"];
+
   readonly cianose = ["labial", "generalizada", "ausente", "nao_avaliado"];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, readonly opcoes: OpcoesService) { }
 
   ngOnInit(): void {
     this.cardiovascular = this.formBuilder.group({

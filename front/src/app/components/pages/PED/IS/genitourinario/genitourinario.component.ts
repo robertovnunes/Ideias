@@ -100,7 +100,7 @@ export class GenitourinarioComponent implements OnInit {
   genital_masculino!: FormGroup;
   isFem!: boolean;
   isMasc !: boolean;
-  corrimentoPresente = this.checkCorrimento();
+  corrimentoPresente: boolean = this.checkCorrimento();
 
   constructor(readonly formBuilder: FormBuilder) {
   }
@@ -112,9 +112,10 @@ export class GenitourinarioComponent implements OnInit {
     this.urina = this.formBuilder.group({
       quantidade: ['', Validators.required],
       jato: ['', Validators.required],
-      cor: ['', Validators.required],
+      corurina: ['', Validators.required],
       odor: ['', Validators.required],
-      frequencia: ['', Validators.required]
+      frequencia: ['', Validators.required],
+      urgencia: ['', Validators.required],
     });
     this.historico_menstrual = this.formBuilder.group({
       menstruacao: [''],
@@ -144,12 +145,11 @@ export class GenitourinarioComponent implements OnInit {
     });
     this.genitourinario = this.formBuilder.group({
       urina: this.urina,
-      corrimento: this.formBuilder.group({
-        presente: [''],
-        cor: [''],
-        odor: [''],
-      }),
-      genital: this.genital_feminino.value || this.genital_masculino.value
+      corrimento: [''],
+      corrimentopresente: this.corrimento_vaginal_presente,
+      disuria: [''],
+      atividadesexual: [''],
+      genital: [this.genital_feminino.value || this.genital_masculino.value]
     });
   }
 
@@ -163,6 +163,12 @@ export class GenitourinarioComponent implements OnInit {
   }
 
   private checkCorrimento() {
-    return true
+    if (this.genitourinario) {
+      // Agora você pode acessar a propriedade 'corrimento' do FormGroup
+      const corrimentoValue = this.genitourinario.value;
+      return corrimentoValue === 'presente';
+    } else {
+      return false;
+    }
   }
 }
