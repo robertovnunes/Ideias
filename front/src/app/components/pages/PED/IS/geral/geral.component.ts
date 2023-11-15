@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {NgForOf} from "@angular/common";
+import {JsonPipe, NgForOf} from "@angular/common";
 import {MatStepperModule} from "@angular/material/stepper";
 import {
   FormBuilder,
@@ -19,7 +19,7 @@ import {MatButtonModule} from "@angular/material/button";
   templateUrl: './geral.component.html',
   styleUrls: ['./geral.component.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule, JsonPipe],
 })
 export class GeralComponent implements OnInit{
   geral!: FormGroup;

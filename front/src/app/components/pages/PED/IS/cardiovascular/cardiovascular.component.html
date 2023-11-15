@@ -1,32 +1,37 @@
 <div class="container">
   <form [formGroup]="cardiovascular">
-    <mat-form-field class="formItem">
-      <mat-select formControlName="dispineia">
-        <mat-option *ngFor="let item of opcoes" [value]="item">
-          {{item}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-select formControlName="cianose">
-        <mat-option *ngFor="let item of cianose" value="{{item}}">
-          {{item}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-select formControlName="palpitacao">
-        <mat-option *ngFor="let item of opcoes" [value]="item">
-          {{item}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-select formControlName="taquicardia">
-        <mat-option *ngFor="let item of opcoes" [value]="item">
-          {{item}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field class="formItem">
+        <mat-select formControlName="dispineia">
+          <mat-option *ngFor="let item of opcoes" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-select formControlName="cianose">
+          <mat-option *ngFor="let item of cianose" value="{{item}}">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-select formControlName="palpitacao">
+          <mat-option *ngFor="let item of opcoes" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-select formControlName="taquicardia">
+          <mat-option *ngFor="let item of opcoes" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </form>
+  <pre>
+    {{cardiovascular.value | json}}
+  </pre>
 </div>

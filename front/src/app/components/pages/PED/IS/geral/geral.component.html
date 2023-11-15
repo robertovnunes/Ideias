@@ -1,38 +1,43 @@
 <div class="container">
   <form [formGroup]="geral">
-    <mat-form-field class="formItem">
-      <mat-label>Febre</mat-label>
-      <mat-select formControlName="febre">
-        <mat-option value="sim">Sim</mat-option>
-        <mat-option value="nao">Não</mat-option>
-        <mat-option value="nao avaliado">Não avaliado</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-label>Tosse</mat-label>
-      <mat-select formControlName="peso">
-        <mat-option value="ganho">Ganho</mat-option>
-        <mat-option value="perda">Perda</mat-option>
-        <mat-option value="sem alteração">Sem alteração</mat-option>
-        <mat-option value="nao avaliado">Não avaliado</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="apetite">
-      <mat-label>Apetite</mat-label>
-      <mat-select formControlName="apetite">
-        <mat-option value="falta">Falta</mat-option>
-        <mat-option value="excesso">Excesso</mat-option>
-        <mat-option value="normal">Normal</mat-option>
-        <mat-option value="nao avaliado">Não avaliado</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="altura">
-      <mat-label>Altura</mat-label>
-      <input matInput formControlName="altura" type="text" name="altura" id="altura" placeholder="Altura">
-    </mat-form-field>
-    <mat-form-field class="obs">
-      <mat-label>Observações gerais</mat-label>
-      <textarea matInput formControlName="obs" type="text" name="obs" id="obs" placeholder="Observações gerais"></textarea>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field class="formItem">
+        <mat-label>Febre</mat-label>
+        <mat-select formControlName="febre">
+          <mat-option value="sim">Sim</mat-option>
+          <mat-option value="nao">Não</mat-option>
+          <mat-option value="nao avaliado">Não avaliado</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Tosse</mat-label>
+        <mat-select formControlName="peso">
+          <mat-option value="ganho">Ganho</mat-option>
+          <mat-option value="perda">Perda</mat-option>
+          <mat-option value="sem alteração">Sem alteração</mat-option>
+          <mat-option value="nao avaliado">Não avaliado</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="apetite">
+        <mat-label>Apetite</mat-label>
+        <mat-select formControlName="apetite">
+          <mat-option value="falta">Falta</mat-option>
+          <mat-option value="excesso">Excesso</mat-option>
+          <mat-option value="normal">Normal</mat-option>
+          <mat-option value="nao avaliado">Não avaliado</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="altura">
+        <mat-label>Altura</mat-label>
+        <input matInput formControlName="altura" type="text" name="altura" id="altura" placeholder="Altura">
+      </mat-form-field>
+      <mat-form-field class="obs">
+        <mat-label>Observações gerais</mat-label>
+        <textarea matInput formControlName="obs" type="text" name="obs" id="obs" placeholder="Observações gerais"></textarea>
+      </mat-form-field>
+    </div>
   </form>
+  <pre>
+    {{ geral.value | json }}
+  </pre>
 </div>

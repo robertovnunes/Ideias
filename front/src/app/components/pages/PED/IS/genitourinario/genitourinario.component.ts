@@ -4,7 +4,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {NgForOf, NgIf} from "@angular/common";
+import {JsonPipe, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-genitourinario',
@@ -18,7 +18,8 @@ import {NgForOf, NgIf} from "@angular/common";
     FormsModule,
     NgForOf,
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    JsonPipe
   ],
   standalone: true
 })

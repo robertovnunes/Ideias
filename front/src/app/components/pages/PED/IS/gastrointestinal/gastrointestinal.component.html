@@ -1,46 +1,51 @@
 <div class="container">
   <form [formGroup]="gastrointestinal">
-    <mat-form-field class="formItem">
-      <mat-label>Nauseas</mat-label>
-      <mat-select formControlName="nauseas">
-        <mat-option value="">Selecione</mat-option>
-        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-label>Vômitos</mat-label>
-      <mat-select formControlName="vomitos">
-        <mat-option value="">Selecione</mat-option>
-        <mat-option *ngFor="let opcao of opcoesvomito" value="{{opcao}}">{{opcao}}</mat-option>
-      </mat-select>
-      </mat-form-field>
-    <mat-form-field class="formItem">
-      <mat-label>Dor abdominal</mat-label>
-      <mat-select formControlName="dorabdominal">
-        <mat-option value="">Selecione</mat-option>
-        <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
-      </mat-select>
-      </mat-form-field>
+    <div class="form-group">
       <mat-form-field class="formItem">
-        <mat-label>Tenesmo</mat-label>
-        <mat-select formControlName="tenesmo">
+        <mat-label>Nauseas</mat-label>
+        <mat-select formControlName="nauseas" id="nauseas" name="nauseas">
           <mat-option value="">Selecione</mat-option>
           <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
         </mat-select>
-        </mat-form-field>
-        <mat-form-field class="formItem">
-          <label>Evacuação</label>
-          <select formControlName="evacuacao">
-            <option value="">Selecione</option>
-            <option *ngFor="let opcao of evacuacao" value="{{opcao}}">{{opcao}}</option>
-          </select>
-        </mat-form-field>
-        <mat-form-field class="formItem">
-          <label>Aspecto das fezes</label>
-          <select formControlName="aspectofezes">
-            <option value="">Selecione</option>
-            <option *ngFor="let opcao of aspecto" value="{{opcao}}">{{opcao}}</option>
-          </select>
-        </mat-form-field>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Vômitos</mat-label>
+        <mat-select formControlName="vomitos" id="vomitos" name="vomitos">
+          <mat-option value="">Selecione</mat-option>
+          <mat-option *ngFor="let opcao of opcoesvomito" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Dor abdominal</mat-label>
+        <mat-select formControlName="dorabdominal" id="dorabdominal" name="dorabdominal">
+          <mat-option value="">Selecione</mat-option>
+          <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Tenesmo</mat-label>
+        <mat-select formControlName="tenesmo" id="tenesmo" name="tenesmo">
+          <mat-option value="">Selecione</mat-option>
+          <mat-option *ngFor="let opcao of opcoes" value="{{opcao}}">{{opcao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <label>Evacuação</label>
+        <select formControlName="evacuacao" id="evacuacao" name="evacuacao">
+          <option value="">Selecione</option>
+          <option *ngFor="let opcao of evacuacao" value="{{opcao}}">{{opcao}}</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <label>Aspecto das fezes</label>
+        <select formControlName="aspectofezes" id="aspectofezes" name="aspectofezes">
+          <option value="">Selecione</option>
+          <option *ngFor="let opcao of aspecto" value="{{opcao}}">{{opcao}}</option>
+        </select>
+      </mat-form-field>
+    </div>
   </form>
+  <pre>
+    {{gastrointestinal.value | json}}
+  </pre>
 </div>

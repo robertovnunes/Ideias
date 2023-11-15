@@ -70,7 +70,7 @@ createForm(): FormGroup {
   return this.formBuilder.group({
     nome: ['', Validators.required],
     sexo: ['', Validators.required],
-    endereco: ['', Validators.required],
+    logradouro: ['', Validators.required],
     complemento: ['', Validators.required],
     bairro: ['', Validators.required],
     cidade: ['', Validators.required],

@@ -1,4 +1,4 @@
-import { NgForOf } from '@angular/common';
+import {JsonPipe, NgForOf} from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,7 +12,7 @@ import { MatStepperModule } from '@angular/material/stepper';
   templateUrl: './gastrointestinal.component.html',
   styleUrls: ['./gastrointestinal.component.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule]
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, NgForOf, MatStepperModule, FormsModule, MatButtonModule, ReactiveFormsModule, JsonPipe]
 })
 export class GastrointestinalComponent implements OnInit {
 

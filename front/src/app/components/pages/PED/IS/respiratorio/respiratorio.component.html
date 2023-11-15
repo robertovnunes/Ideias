@@ -1,6 +1,6 @@
 <div class="container">
     <form [formGroup]="respiratorio">
-        <mat-form-field MatFormFieldControl="" class="formItem">
+        <mat-form-field class="formItem">
             <mat-label>Corrimento nasal</mat-label>
             <mat-select formControlName="corrimento">
                 <mat-option *ngFor="let corrimento of corrimento_nasal" value="{{corrimento}}">
@@ -102,4 +102,7 @@
             </mat-select>
         </mat-form-field>
     </form>
+  <pre>
+    {{respiratorio.value | json}}
+  </pre>
 </div>
