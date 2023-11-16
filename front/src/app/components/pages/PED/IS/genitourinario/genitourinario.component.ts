@@ -94,45 +94,31 @@ export class GenitourinarioComponent implements OnInit {
   }
   urina!: FormGroup;
   genitourinario!: FormGroup;
-  historico_menstrual!: FormGroup;
-  corrimento_vaginal_presente!: FormGroup;
   genital_feminino!: FormGroup;
   genital_masculino!: FormGroup;
-  isFem!: boolean;
-  isMasc !: boolean;
+  isFem = this.checkIsFem();
+  isMasc = this.checkIsMasc();
   corrimentoPresente: boolean = this.checkCorrimento();
 
   constructor(readonly formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
-    this.femmasc = this.formBuilder.group({
-      genital: ['']
-    });
-    this.urina = this.formBuilder.group({
-      quantidade: ['', Validators.required],
-      jato: ['', Validators.required],
-      corurina: ['', Validators.required],
-      odor: ['', Validators.required],
-      frequencia: ['', Validators.required],
-      urgencia: ['', Validators.required],
-    });
-    this.historico_menstrual = this.formBuilder.group({
-      menstruacao: [''],
-      menarca: [''],
-      regularidade: [''],
-      fuxo: ['']
-    });
-    this.corrimento_vaginal_presente = this.formBuilder.group({
-      cor: [''],
-      odor: [''],
-      prurido: [''],
-    });
     this.genital_feminino = this.formBuilder.group({
       corrimento_vaginal: [{
         presente: [''],
-        corrimento_vaginal_presente: this.corrimento_vaginal_presente
+        corrimento_vaginal_presente: this.formBuilder.group({
+          cor: [''],
+          odor: [''],
+          prurido: [''],
+        })
       }],
+      historico_menstrual: this.formBuilder.group({
+        menstruacao: [''],
+        menarca: [''],
+        regularidade: [''],
+        fuxo: ['']
+      }),
       telarca: [''],
       pubarca: [''],
     });
@@ -144,9 +130,15 @@ export class GenitourinarioComponent implements OnInit {
       polucoes: [''],
     });
     this.genitourinario = this.formBuilder.group({
-      urina: this.urina,
+      urina: this.formBuilder.group({
+        quantidade: ['', Validators.required],
+        jato: ['', Validators.required],
+        corurina: ['', Validators.required],
+        odor: ['', Validators.required],
+        frequencia: ['', Validators.required],
+        urgencia: ['', Validators.required],
+      }),
       corrimento: [''],
-      corrimentopresente: this.corrimento_vaginal_presente,
       disuria: [''],
       atividadesexual: [''],
       genital: [this.genital_feminino.value || this.genital_masculino.value]
@@ -154,7 +146,6 @@ export class GenitourinarioComponent implements OnInit {
   }
 
   checkIsFem() {
-
     return true;
   }
 
