@@ -5,6 +5,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {JsonPipe, NgForOf, NgIf} from "@angular/common";
+import {OpcoesService} from "../../services/opcoes.service";
 
 @Component({
   selector: 'app-genitourinario',
@@ -28,7 +29,6 @@ export class GenitourinarioComponent implements OnInit {
 
   femmasc!: FormGroup;
 
-  readonly opcoes = ["Sim", "Não", "Não avaliado"];
   readonly urinaop = {
     quantidade: [
       "normal",
@@ -54,7 +54,6 @@ export class GenitourinarioComponent implements OnInit {
       "nao_avaliado"]
   };
   readonly corrimento = {
-    presente: ["Sim", "Não", "nao_avaliado"],
     cor: [
       "Claro",
       "Leitoso",
@@ -63,6 +62,7 @@ export class GenitourinarioComponent implements OnInit {
       "Inodoro",
       "Fétido",
       "nao_avaliado"],
+
   };
   readonly genitalfeminino = {
     corrimento_vaginal: ["presente", "ausente", "nao_avaliado"],
@@ -84,7 +84,7 @@ export class GenitourinarioComponent implements OnInit {
       menstruacao: ["presente", "ausente", "nao_avaliado"],
       menarca: ["< 8 anos", "8-16 anos", "> 16 anos", "nao_avaliado"],
       regularidade: ["< 28 dias", "28 dias", "> 28 dias", "Não avaliado"],
-      fuxo: ["Normal", "Aumentado", "Diminuído", "Não avaliado"]
+      fluxo: ["Normal", "Aumentado", "Diminuído", "Não avaliado"]
     }
   };
   readonly genitalmasculino = {
@@ -92,15 +92,15 @@ export class GenitourinarioComponent implements OnInit {
     volumetesticular: ["Normal para a idade", "Menor que o normal", "Maior que o normal", "Não avaliado"],
     tamanhopenis: ["Normal para a idade", "Menor que o normal", "Maior que o normal", "Não avaliado"],
   }
-  urina!: FormGroup;
   genitourinario!: FormGroup;
   genital_feminino!: FormGroup;
   genital_masculino!: FormGroup;
   isFem = this.checkIsFem();
   isMasc = this.checkIsMasc();
   corrimentoPresente: boolean = this.checkCorrimento();
+  menstruacao = true;
 
-  constructor(readonly formBuilder: FormBuilder) {
+  constructor(readonly formBuilder: FormBuilder, readonly opcoes: OpcoesService) {
   }
 
   ngOnInit() {
@@ -138,7 +138,11 @@ export class GenitourinarioComponent implements OnInit {
         frequencia: ['', Validators.required],
         urgencia: ['', Validators.required],
       }),
-      corrimento: [''],
+      corrimento: this.formBuilder.group({
+        presente: ['', Validators.required],
+        cor: [''],
+        odor: [''],
+      }),
       disuria: [''],
       atividadesexual: [''],
       genital: [this.genital_feminino.value || this.genital_masculino.value]

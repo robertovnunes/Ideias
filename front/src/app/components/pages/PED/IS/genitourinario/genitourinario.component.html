@@ -1,31 +1,207 @@
 <div class="container">
   <form [formGroup]="genitourinario">
-    <div formGroupName="urina">
-      <h2>Urina</h2>
+    <div class="form-group">
+      <div formGroupName="urina">
+        <h2>Urina</h2>
+        <mat-form-field class="formItem">
+          <mat-label>Quantidade</mat-label>
+          <mat-select placeholder="Quantidade" formControlName="quantidade">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of urinaop.quantidade" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Jato</mat-label>
+          <mat-select placeholder="Jato" formControlName="jato">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of urinaop.jato" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Cor</mat-label>
+          <mat-select placeholder="Cor" formControlName="cor">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of urinaop.cor" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-select placeholder="Odor" formControlName="odor">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of urinaop.odor" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Frequencia</mat-label>
+          <mat-select placeholder="Frequencia" formControlName="aspecto">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of urinaop.frequencia" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Urgencia</mat-label>
+          <mat-select placeholder="Urgencia" formControlName="urgencia">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of opcoes.getOpcoes1()" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
       <mat-form-field class="formItem">
-        <mat-select placeholder="Cor" formControlName="cor">
+        <mat-label>Disúria</mat-label>
+        <mat-select placeholder="Disúria" formControlName="disuria">
           <mat-option [value]="">Selecione</mat-option>
-          <mat-option *ngFor="let opt of urinaop.quantidade" [value]="opt">
+          <mat-option *ngFor="let opt of opcoes.getOpcoes1()" [value]="opt">
             {{opt}}
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <div formGroupName="corrimento">
+        <h2>Corrimento uretral</h2>
+        <mat-form-field class="formItem">
+          <mat-select placeholder="Corrimento Vaginal" formControlName="corrimento">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of opcoes.getOpcoes2()" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Cor</mat-label>
+          <mat-select placeholder="Cor" formControlName="Cor">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of corrimento.cor" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Odor</mat-label>
+          <mat-select placeholder="Odor" formControlName="odor">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of corrimento.odor" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
       <mat-form-field class="formItem">
-        <mat-select placeholder="Jato" formControlName="jato">
+        <mat-label>Atividade sexual</mat-label>
+        <mat-select placeholder="Atividade sexual" formControlName="atividadesexual">
           <mat-option [value]="">Selecione</mat-option>
-          <mat-option *ngFor="let opt of urinaop.jato" [value]="opt">
+          <mat-option *ngFor="let opt of opcoes.getOpcoes1()" [value]="opt">
             {{opt}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field class="formItem">
-        <mat-select placeholder="Cor" formControlName="cor">
-          <mat-option [value]="">Selecione</mat-option>
-          <mat-option *ngFor="let opt of urinaop.cor" [value]="opt">
-            {{opt}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+      <div class=formItem" formGroupName="genital_feminino">
+        <h2>Aparelho genital</h2>
+        <div formGroupName="corrimento_vaginal">
+          <mat-form-field class="formItem">
+            <mat-select placeholder="Corrimento Vaginal" formControlName="corrimento_vaginal">
+              <mat-option [value]="">Selecione</mat-option>
+              <mat-option *ngFor="let opt of opcoes.getOpcoes2()" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div formGroupName="corrimento_vaginal_presente">
+            <mat-form-field class="formItem">
+              <mat-label>Cor</mat-label>
+              <mat-select placeholder="Cor" formControlName="cor">
+                <mat-option [value]="">Selecione</mat-option>
+                <mat-option *ngFor="let opt of corrimento.cor" [value]="opt">
+                  {{opt}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="formItem">
+              <mat-label>Odor</mat-label>
+              <mat-select placeholder="Odor" formControlName="odor">
+                <mat-option [value]="">Selecione</mat-option>
+                <mat-option *ngFor="let opt of corrimento.odor" [value]="opt">
+                  {{opt}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="formItem">
+              <mat-label>Prurido</mat-label>
+              <mat-select placeholder="Prurido" formControlName="prurido">
+                <mat-option [value]="">Selecione</mat-option>
+                <mat-option *ngFor="let opt of opcoes.getOpcoes2()" [value]="opt">
+                  {{opt}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <mat-form-field class="formItem">
+          <mat-label>Telarca</mat-label>
+          <mat-select placeholder="Telarca" formControlName="telarca">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of genitalfeminino.telarca" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Pubarca</mat-label>
+          <mat-select placeholder="Pubarca" formControlName="pubarca">
+            <mat-option [value]="">Selecione</mat-option>
+            <mat-option *ngFor="let opt of genitalfeminino.pubarca" [value]="opt">
+              {{opt}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div formGroupName="historico_menstrual">
+          <mat-form-field class="formItem">
+            <mat-label>Menstruação</mat-label>
+            <mat-select placeholder="Menstruação" formControlName="menstruacao">
+              <mat-option [value]="">Selecione</mat-option>
+              <mat-option *ngFor="let opt of opcoes.getOpcoes2()" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="menstruacao" class="formItem">
+            <mat-label>Menarca</mat-label>
+            <mat-select placeholder="Menarca" formControlName="menarca">
+              <mat-option [value]="">Selecione</mat-option>
+              <mat-option *ngFor="let opt of genitalfeminino.historico_menstrual.menarca" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="menstruacao" class="formItem">
+            <mat-label>Regularidade</mat-label>
+            <mat-select placeholder="Regularidade" formControlName="regularidade">
+              <mat-option [value]="">Selecione</mat-option>
+              <mat-option *ngFor="let opt of genitalfeminino.historico_menstrual.regularidade" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="menstruacao" class="formItem">
+            <mat-label>Fluxo</mat-label>
+            <mat-select placeholder="Fluxo" formControlName="fluxo">
+              <mat-option [value]="">Selecione</mat-option>
+              <mat-option *ngFor="let opt of genitalfeminino.historico_menstrual.fluxo" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
     </div>
   </form>
   <pre>
