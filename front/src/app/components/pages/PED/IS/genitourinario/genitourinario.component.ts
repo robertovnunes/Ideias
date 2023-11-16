@@ -133,7 +133,7 @@ export class GenitourinarioComponent implements OnInit {
       urina: this.formBuilder.group({
         quantidade: ['', Validators.required],
         jato: ['', Validators.required],
-        corurina: ['', Validators.required],
+        cor: ['', Validators.required],
         odor: ['', Validators.required],
         frequencia: ['', Validators.required],
         urgencia: ['', Validators.required],
