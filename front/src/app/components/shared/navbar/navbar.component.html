@@ -9,6 +9,9 @@
         <li><a routerLink="/ped">Pediatrico</a></li>
       </ul>
     </div>
+    <button mat-button >
+      <mat-icon fontIcon="dark_mode"></mat-icon>
+    </button>
     <a *ngIf="isLogedIn" routerLink="/profile" class="menu-item">Perfil</a>
     <a *ngIf="isLogedIn && isAdmin" routerLink="/configuracoes" class="menu-item">Configurações</a>
     <a routerLink="/logout" *ngIf="isLogedIn" (click)="alert('sair')" class="menu-item">Sair</a>

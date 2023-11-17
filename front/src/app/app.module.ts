@@ -17,6 +17,7 @@ import {ProfileComponent} from "./components/admin/profile/profile.component";
 import {NgIf} from "@angular/common";
 import {PedModule} from "./components/pages/PED/ped.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -29,18 +30,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonComponent,
     ProfileComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterLink,
-    RouterOutlet,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    NgIf,
-    PedModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterLink,
+        RouterOutlet,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgIf,
+        PedModule,
+        BrowserAnimationsModule,
+        MatIconModule
+    ],
   providers: [],
   exports: [
     NavbarComponent
