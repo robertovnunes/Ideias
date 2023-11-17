@@ -65,7 +65,6 @@ export class GenitourinarioComponent implements OnInit {
 
   };
   readonly genitalfeminino = {
-    corrimento_vaginal: ["presente", "ausente", "nao_avaliado"],
     corrimento_vaginal_presente: {
       cor: [
         "Claro",
@@ -81,7 +80,6 @@ export class GenitourinarioComponent implements OnInit {
     telarca: ["< 8 anos", "8-13 anos", "> 13 anos", "ausente", "nao_avaliado"],
     pubarca: ["< 6 anos", " 6-13 anos", "> 13 anos", "ausente", "nao_avaliado"],
     historico_menstrual: {
-      menstruacao: ["presente", "ausente", "nao_avaliado"],
       menarca: ["< 8 anos", "8-16 anos", "> 16 anos", "nao_avaliado"],
       regularidade: ["< 28 dias", "28 dias", "> 28 dias", "Não avaliado"],
       fluxo: ["Normal", "Aumentado", "Diminuído", "Não avaliado"]
@@ -93,8 +91,6 @@ export class GenitourinarioComponent implements OnInit {
     tamanhopenis: ["Normal para a idade", "Menor que o normal", "Maior que o normal", "Não avaliado"],
   }
   genitourinario!: FormGroup;
-  genital_feminino!: FormGroup;
-  genital_masculino!: FormGroup;
   isFem = this.checkIsFem();
   isMasc = this.checkIsMasc();
   corrimentoPresente: boolean = this.checkCorrimento();
@@ -104,31 +100,6 @@ export class GenitourinarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.genital_feminino = this.formBuilder.group({
-      corrimento_vaginal: [{
-        presente: [''],
-        corrimento_vaginal_presente: this.formBuilder.group({
-          cor: [''],
-          odor: [''],
-          prurido: [''],
-        })
-      }],
-      historico_menstrual: this.formBuilder.group({
-        menstruacao: [''],
-        menarca: [''],
-        regularidade: [''],
-        fuxo: ['']
-      }),
-      telarca: [''],
-      pubarca: [''],
-    });
-    this.genital_masculino = this.formBuilder.group({
-      pubarca: [''],
-      volumetesticular: [''],
-      tamanhopenis: [''],
-      erecoes: [''],
-      polucoes: [''],
-    });
     this.genitourinario = this.formBuilder.group({
       urina: this.formBuilder.group({
         quantidade: ['', Validators.required],
@@ -145,8 +116,34 @@ export class GenitourinarioComponent implements OnInit {
       }),
       disuria: [''],
       atividadesexual: [''],
-      genital: [this.genital_feminino.value || this.genital_masculino.value]
-    });
+      genital_feminino: this.formBuilder.group({
+        corrimento_vaginal: this.formBuilder.group({
+          presente: [''],
+          cor: [''],
+          odor: [''],
+          prurido: [''],
+        }),
+        historico_menstrual:
+          this.formBuilder.group({
+            presente: [''],
+            menarca: [''],
+            regularidade: [''],
+            fluxo: ['']
+          }),
+        telarca:
+          [''],
+        pubarca:
+          [''],
+      }),
+    genital_masculino: this.formBuilder.group({
+      pubarca: [''],
+      volumetesticular: [''],
+      tamanhopenis: [''],
+      erecoes: [''],
+      polucoes: [''],
+    })
+  })
+    ;
   }
 
   checkIsFem() {
