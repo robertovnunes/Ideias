@@ -1,1 +1,39 @@
-<p>musculoesqueletico works!</p>
+<div class="container">
+  <form [formGroup]="musculoesqueletico">
+    <h2>Musculo-Esquelético</h2>
+    <div class="form-group">
+      <mat-form-field class="formItem">
+        <mat-label>Deformidades</mat-label>
+        <mat-select formControlName="deformidades">
+          <mat-option *ngFor="let item of opcoes.getOpcoes3()" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Tumefações</mat-label>
+        <mat-select formControlName="deformidades">
+          <mat-option *ngFor="let item of opcoes.getOpcoes3()" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Fraqueza muscular</mat-label>
+        <mat-select formControlName="fraquezamuscular">
+          <mat-option *ngFor="let item of opcoes.getOpcoes1()" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Dores osseas e articulares</mat-label>
+        <mat-select formControlName="dorosseaart">
+          <mat-option *ngFor="let item of opcoes.getOpcoes1()" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

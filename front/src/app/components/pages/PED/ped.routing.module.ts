@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PedComponent } from './ped.component';
-import { GenitourinarioComponent} from "./IS/genitourinario/genitourinario.component";
+import { MusculoesqueleticoComponent} from "./IS/musculoesqueletico/musculoesqueletico.component";
 
 const routes: Routes = [
   { path: 'ped', component: PedComponent },
-  { path: 'ped/genitourinario', component: GenitourinarioComponent }
+  { path: 'ped/musculo', component: MusculoesqueleticoComponent }
 ];
 
 @NgModule({
