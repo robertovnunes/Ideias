@@ -1,1 +1,93 @@
-<p>sistemanervoso works!</p>
+<div class="container">
+  <form [formGroup]="sisnervoso">
+    <div class="form-group">
+      <h2>Sistema nervoso</h2>
+      <mat-form-field class="formItem">
+        <mat-label>Cefaléia</mat-label>
+        <mat-select formControlName="cefaleia">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Tonturas</mat-label>
+        <mat-select formControlName="tonturas">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="formItem" formGroupName="convulsoes">
+        <h2>Convulsões</h2>
+        <mat-form-field class="formItem">
+          <mat-select formControlName="convulsao">
+            <mat-option *ngFor="let op of convulsoes" [value]="op">
+              {{op}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>Se presente, favor informar nos campos abaixo</p>
+        <mat-form-field class="formItem">
+          <mat-label>Tipo</mat-label>
+          <mat-select formControlName="tipo">
+            <mat-option *ngFor="let op of tipos" [value]="op">
+              {{op}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Região</mat-label>
+          <mat-select formControlName="regiao">
+            <mat-option *ngFor="let op of regiao" [value]="op">
+              {{op}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <mat-form-field class="formItem">
+        <mat-label>Traumas cranianos</mat-label>
+        <mat-select formControlName="traumascranianos">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Sincopes</mat-label>
+        <mat-select formControlName="sincopes">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Paresias</mat-label>
+        <mat-select formControlName="paresias">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Paralisias</mat-label>
+        <mat-select formControlName="paralisias">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formItem">
+        <mat-label>Retardo psicomotor</mat-label>
+        <mat-select formControlName="retardoneuropsicomotor">
+          <mat-option *ngFor="let op of opcoes.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+  <pre>
+    {{sisnervoso.value | json}}
+  </pre>
+</div>

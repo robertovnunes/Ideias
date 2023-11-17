@@ -58,7 +58,21 @@
     <app-genitourinario></app-genitourinario>
     <div class="navButton">
       <button mat-button matStepperPrevious>Gastrointestinal</button>
-      <button mat-button matStepperNext>Locomotor</button>
+      <button mat-button matStepperNext>Musculo-Esquelético</button>
+    </div>
+  </mat-step>
+  <mat-step label="Musculo-Esquelético">
+    <app-musculoesqueletico></app-musculoesqueletico>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Genitourinário</button>
+      <button mat-button matStepperNext>Sistema Nervoso</button>
+    </div>
+  </mat-step>
+  <mat-step label="Sistema Nervoso">
+    <app-sistemanervoso></app-sistemanervoso>
+    <div class="navButton">
+      <button mat-button matStepperPrevious>Musculo-Esquelético</button>
+      <button mat-button matStepperNext>Endócrino</button>
     </div>
   </mat-step>
 </mat-stepper>

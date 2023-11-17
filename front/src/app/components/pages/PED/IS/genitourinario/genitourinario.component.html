@@ -211,11 +211,14 @@
         </mat-form-field>
         <mat-form-field class="formItem">
           <mat-label>Poluções</mat-label>
-          <mat-select formControlName="erecao">
+          <mat-select formControlName="polucoes">
             <mat-option *ngFor="let item of opcoes.getOpcoes2()" value="{{item}}">{{item}}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
     </div>
   </form>
+  <pre>
+    {{genitourinario.value | json}}
+  </pre>
 </div>

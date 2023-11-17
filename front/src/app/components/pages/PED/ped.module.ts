@@ -25,6 +25,7 @@ import {CardiovascularComponent} from './IS/cardiovascular/cardiovascular.compon
 import {GastrointestinalComponent} from './IS/gastrointestinal/gastrointestinal.component';
 import {GenitourinarioComponent} from "./IS/genitourinario/genitourinario.component";
 import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqueletico.component';
+import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.component";
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqu
     CardiovascularComponent,
     GenitourinarioComponent,
     PeleComponent,
-    MusculoesqueleticoComponent
+    MusculoesqueleticoComponent,
+    SistemanervosoComponent
   ],
   exports: [
     MatInputModule,

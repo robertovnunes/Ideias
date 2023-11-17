@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PedComponent } from './ped.component';
-import { MusculoesqueleticoComponent} from "./IS/musculoesqueletico/musculoesqueletico.component";
+import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.component";
 
 const routes: Routes = [
   { path: 'ped', component: PedComponent },
-  { path: 'ped/musculo', component: MusculoesqueleticoComponent }
+  { path: 'ped/nervoso', component: SistemanervosoComponent }
 ];
 
 @NgModule({
