@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PedComponent } from './ped.component';
-import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.component";
+import { AntecedentesComponent } from "./antecedentes/antecedentes.component";
 
 const routes: Routes = [
   { path: 'ped', component: PedComponent },
-  { path: 'ped/nervoso', component: SistemanervosoComponent }
+  { path: 'ped/antecedentes', component: AntecedentesComponent }
 ];
 
 @NgModule({

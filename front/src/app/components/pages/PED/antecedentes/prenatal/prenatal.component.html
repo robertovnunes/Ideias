@@ -1,0 +1,46 @@
+<div class="container">
+  <form [formGroup]="prenatal">
+    <div class="form-group">
+      <h2>Acompanhamento medico</h2>
+      <div formGroupName="acompanhamento">
+        <mat-form-field class="formItem">
+          <mat-checkbox formControlName="realizou">Acompanhamento medico</mat-checkbox>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Onde</mat-label>
+          <input matInput formControlName="onde" placeholder="Onde">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Quantidade de conultas</mat-label>
+          <input matInput formControlName="consultas" placeholder="Quantidade de consultas">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Duração da gestação</mat-label>
+          <input matInput formControlName="duracao" placeholder="Duração da gestação">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Anormalidades</mat-label>
+          <input matInput formControlName="anormalidades" placeholder="Anormalidades">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Medicações</mat-label>
+          <input matInput formControlName="medicacoes" placeholder="Medicações">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Radiações</mat-label>
+          <input matInput formControlName="radiacoes" placeholder="Radiações">
+        </mat-form-field>
+        <div formGroupName="doencascirurgicas">
+          <mat-form-field class="formItem">
+            <mat-checkbox formControlName="presente">Doenças cirurgicas</mat-checkbox>
+          </mat-form-field>
+          <mat-form-field class="formItem">
+            <mat-label>Periodo</mat-label>
+            <input matInput formControlName="periodo" placeholder="Periodo">
+          </mat-form-field>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
