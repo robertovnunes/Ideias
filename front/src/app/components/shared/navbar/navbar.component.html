@@ -9,7 +9,7 @@
         <li><a routerLink="/ped">Pediatrico</a></li>
       </ul>
     </div>
-    <button mat-button >
+    <button mat-button (click)="toggleTheme()">
       <mat-icon fontIcon="dark_mode"></mat-icon>
     </button>
     <a *ngIf="isLogedIn" routerLink="/profile" class="menu-item">Perfil</a>
