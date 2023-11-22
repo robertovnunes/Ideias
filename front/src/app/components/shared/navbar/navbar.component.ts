@@ -38,7 +38,6 @@ export class NavbarComponent implements OnInit {
     this.themeService.toggleTheme();
     alert(this.themeService.isDarkThemeEnabled() ? 'Dark mode enabled' : 'Light mode enabled');
   }
-
   protected readonly alert = alert;
 
 }

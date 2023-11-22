@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ThemeService } from "./service/theme.service";
 
 @Component({
@@ -6,8 +6,13 @@ import { ThemeService } from "./service/theme.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  isDarkTheme: boolean = false;
   title = 'plataforma-ideias';
-  constructor(readonly themeService: ThemeService) {
+  constructor(private themeService: ThemeService) {
   }
+  ngOnInit(): void {
+    this.themeService.isDarkTheme$.subscribe((isDarkTheme) => {
+      this.isDarkTheme = isDarkTheme;
+    });  }
 }
