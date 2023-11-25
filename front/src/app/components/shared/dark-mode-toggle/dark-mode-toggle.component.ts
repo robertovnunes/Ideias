@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatIconModule} from "@angular/material/icon";
 import {DarkModeService} from "angular-dark-mode";
@@ -11,11 +11,28 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle"
   templateUrl: './dark-mode-toggle.component.html',
   styleUrl: './dark-mode-toggle.component.css'
 })
-export class DarkModeToggleComponent {
+export class DarkModeToggleComponent implements OnInit{
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+  modeenable!: string;
   constructor(private darkModeService: DarkModeService) {}
   onToggle(): void {
     this.darkModeService.toggle();
-    console.log('toggle');
+    this.darkMode$.subscribe((val) => {
+      if (val) {
+        this.modeenable =  "Alternar para o modo claro";
+      } else {
+        this.modeenable =  "Alternar para o modo escuro";
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.darkMode$.subscribe((val) => {
+      if (val) {
+        this.modeenable =  "Alternar para o modo claro";
+      } else {
+        this.modeenable =  "Alternar para o modo escuro";
+      }
+    });
   }
 }
