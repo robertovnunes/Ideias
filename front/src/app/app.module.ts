@@ -18,6 +18,8 @@ import {NgIf} from "@angular/common";
 import {PedModule} from "./components/pages/PED/ped.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {DarkModeToggleComponent} from "./components/shared/dark-mode-toggle/dark-mode-toggle.component";
 
 
 @NgModule({
@@ -30,19 +32,21 @@ import {MatIconModule} from "@angular/material/icon";
     ButtonComponent,
     ProfileComponent,
   ],
-    imports: [
-        BrowserModule,
-        RouterLink,
-        RouterOutlet,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        NgIf,
-        PedModule,
-        BrowserAnimationsModule,
-        MatIconModule
-    ],
+  imports: [
+    BrowserModule,
+    RouterLink,
+    RouterOutlet,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgIf,
+    PedModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatCheckboxModule,
+    DarkModeToggleComponent
+  ],
   providers: [],
   exports: [
     NavbarComponent

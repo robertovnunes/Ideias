@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router, RouterEvent} from "@angular/router";
 import {LocalStorageService} from "../../../service/local-storage.service";
 
-import { ThemeService } from "../../../service/theme.service";
+
 
 @Component({
   selector: 'app-navbar',
@@ -16,8 +16,7 @@ export class NavbarComponent implements OnInit {
   isAdmin: boolean = false;
 
   constructor(private readonly router: Router,
-              private localStorageService: LocalStorageService,
-              private themeService: ThemeService) {
+              private localStorageService: LocalStorageService) {
 
   }
 
@@ -32,15 +31,12 @@ export class NavbarComponent implements OnInit {
         }
       }
     });
+  }
 
-  }
-  toggleTheme(): void {
-    this.themeService.toggleTheme();
-    alert(this.themeService.isDarkThemeEnabled() ? 'Dark mode enabled' : 'Light mode enabled');
-  }
   protected readonly alert = alert;
 
 }
 
+//37972517
 
 

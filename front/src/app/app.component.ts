@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { ThemeService } from "./service/theme.service";
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,8 @@ import { ThemeService } from "./service/theme.service";
 export class AppComponent implements OnInit{
   isDarkTheme: boolean = false;
   title = 'plataforma-ideias';
-  constructor(private themeService: ThemeService) {
+  constructor() {
   }
   ngOnInit(): void {
-    this.themeService.isDarkTheme$.subscribe((isDarkTheme) => {
-      this.isDarkTheme = isDarkTheme;
-    });  }
+  }
 }
