@@ -4,11 +4,13 @@ import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatSelectModule} from "@angular/material/select";
+import {OpcoesService} from "../../services/opcoes.service";
 
 @Component({
   selector: 'app-prenatal',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatCheckboxModule],
+  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatSelectModule],
   templateUrl: './prenatal.component.html',
   styleUrl: './prenatal.component.css'
 })
@@ -16,7 +18,8 @@ export class PrenatalComponent implements OnInit {
 
   prenatal!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              public opcoesService: OpcoesService) {
 
   }
   ngOnInit(): void {
@@ -24,11 +27,11 @@ export class PrenatalComponent implements OnInit {
       acompanhamento: this.fb.group({
         realizou: [''],
         onde: [''],
-        consultas: [''],
-        duracao: ['']
+        consultas: ['']
       }),
+      duracao: [''],
       anormalidades: [''],
-      medicamentos: [''],
+      medicacoes: [''],
       radiacoes: [''],
       doencascirurgicas: this.fb.group({
         presente: [''],

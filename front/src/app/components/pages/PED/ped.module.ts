@@ -26,6 +26,9 @@ import {GastrointestinalComponent} from './IS/gastrointestinal/gastrointestinal.
 import {GenitourinarioComponent} from "./IS/genitourinario/genitourinario.component";
 import { MusculoesqueleticoComponent } from './IS/musculoesqueletico/musculoesqueletico.component';
 import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.component";
+import {MatTabsModule} from "@angular/material/tabs";
+import {QpdhdaComponent} from "./qpdhda/qpdhda.component";
+import {AntecedentesComponent} from "./antecedentes/antecedentes.component";
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.compon
     GenitourinarioComponent,
     PeleComponent,
     MusculoesqueleticoComponent,
-    SistemanervosoComponent
+    SistemanervosoComponent,
+    MatTabsModule,
+    QpdhdaComponent,
+    AntecedentesComponent
   ],
   exports: [
     MatInputModule,
