@@ -29,7 +29,7 @@ export class PrenatalComponent implements OnInit {
         onde: [''],
         consultas: ['']
       }),
-      duracao: [''],
+      duracaogest: [''],
       anormalidades: [''],
       medicacoes: [''],
       radiacoes: [''],

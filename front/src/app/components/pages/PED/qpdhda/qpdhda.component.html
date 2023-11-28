@@ -1,9 +1,11 @@
 <div>
-  <form>
+  <form [formGroup]="qpdhda">
     <h2>Queixa principal</h2>
-    <textarea matInput name="queixa" rows="8" cols="80"></textarea>
+    <mat-form-field>
+      <textarea matInput formControlName="queixa_principal" name="queixa" rows="8" cols="80"></textarea>
+    </mat-form-field>
     <h2>História da doença atual</h2>
-    <textarea matInput name="historia" rows="8" cols="80"></textarea>
+    <textarea matInput formControlName="historia_doenca_atual" name="historia" rows="8" cols="80"></textarea>
     <div>
       <h3>Adendos</h3>
       <mat-form-field>

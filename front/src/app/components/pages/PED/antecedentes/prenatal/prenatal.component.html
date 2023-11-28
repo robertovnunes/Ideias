@@ -1,8 +1,8 @@
 <div class="container">
   <form [formGroup]="prenatal">
     <div class="form-group">
-      <h2>Acompanhamento medico</h2>
       <div formGroupName="acompanhamento">
+        <h2>Acompanhamento medico</h2>
         <mat-form-field class="formItem">
           <mat-checkbox formControlName="realizou">Acompanhamento medico</mat-checkbox>
         </mat-form-field>
@@ -17,7 +17,7 @@
       </div>
       <mat-form-field class="formItem">
         <mat-label>Duração da gestação</mat-label>
-        <input matInput formControlName="duracao" placeholder="Duração da gestação">
+        <input matInput formControlName="duracaogest" placeholder="Duração da gestação">
       </mat-form-field>
       <mat-form-field class="formItem">
         <mat-label>Anormalidades</mat-label>
@@ -34,7 +34,7 @@
       <div formGroupName="doencascirurgicas">
         <mat-form-field class="formItem">
           <mat-label>Doenças cirurgicas</mat-label>
-          <mat-checkbox formControlName="presente">Doenças cirurgicas</mat-checkbox>
+          <mat-checkbox  formControlName="presente">Doenças cirurgicas</mat-checkbox>
         </mat-form-field>
         <mat-form-field class="formItem">
           <mat-label>Periodo</mat-label>
@@ -44,14 +44,14 @@
       <mat-form-field class="formItem">
         <mat-label>Grupo sanguineo</mat-label>
         <mat-select formControlName="grupo_sanquineo">
-          <mat-option value="A+">A</mat-option>
-          <mat-option value="B+">B</mat-option>
-          <mat-option value="AB+">AB</mat-option>
-          <mat-option value="O+">O</mat-option>
-          <mat-option value="A-">A</mat-option>
-          <mat-option value="B-">B</mat-option>
-          <mat-option value="AB-">AB</mat-option>
-          <mat-option value="O-">O</mat-option>
+          <mat-option value="A+">A+</mat-option>
+          <mat-option value="B+">B+</mat-option>
+          <mat-option value="AB+">AB+</mat-option>
+          <mat-option value="O+">O+</mat-option>
+          <mat-option value="A-">A-</mat-option>
+          <mat-option value="B-">B-</mat-option>
+          <mat-option value="AB-">AB-</mat-option>
+          <mat-option value="O-">O-</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field class="formItem">
@@ -70,6 +70,28 @@
           <input matInput formControlName="quantidade">
         </mat-form-field>
       </div>
+      <div formGroupName="estado_nutricional">
+        <h3>Estado Nutricional</h3>
+        <mat-form-field class="formItem">
+          <mat-label>Alimentação</mat-label>
+          <mat-select formControlName="alimentacao">
+            <mat-option  value="Normal">Normal</mat-option>
+            <mat-option  value="Anormal">Anormal (menos)</mat-option>
+            <mat-option  value="Anormal">Anormal (mais)</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Peso</mat-label>
+          <input matInput formControlName="peso">
+        </mat-form-field>
+        <mat-form-field class="formItem">
+          <mat-label>Anemia</mat-label>
+          <mat-select formControlName="anemia">
+            <mat-option *ngFor="let op of opcoesService.getOpcoes1()" [value]="op">{{op}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
   </form>
+  <pre>{{prenatal.value | json}}</pre>
 </div>
