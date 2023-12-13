@@ -470,7 +470,7 @@
       "rash": "Boolean",
       "sangramentos": "Boolean",
       "vomitos": "Boolean",
-      "infeccões": "Boolean",
+      "infeccoes": "Boolean",
       "anomalias_congenitas": "Boolean",
       "paralisias": "Boolean",
       "coriza": "Boolean",

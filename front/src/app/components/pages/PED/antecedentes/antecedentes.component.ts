@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import {MatStepperModule} from "@angular/material/stepper";
 import {PrenatalComponent} from "./prenatal/prenatal.component";
 import {NatalComponent} from "./natal/natal.component";
+import {NeonatalComponent} from "./neonatal/neonatal.component";
 
 @Component({
   selector: 'app-antecedentes',
   standalone: true,
-  imports: [CommonModule, MatStepperModule, PrenatalComponent, NatalComponent],
+  imports: [CommonModule, MatStepperModule, PrenatalComponent, NatalComponent, NeonatalComponent],
   templateUrl: './antecedentes.component.html',
   styleUrl: './antecedentes.component.css'
 })

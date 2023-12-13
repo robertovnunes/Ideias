@@ -29,6 +29,7 @@ import {SistemanervosoComponent} from "./IS/sistemanervoso/sistemanervoso.compon
 import {MatTabsModule} from "@angular/material/tabs";
 import {QpdhdaComponent} from "./qpdhda/qpdhda.component";
 import {AntecedentesComponent} from "./antecedentes/antecedentes.component";
+import {DarkModeToggleComponent} from "../../shared/dark-mode-toggle/dark-mode-toggle.component";
 
 
 @NgModule({
@@ -36,34 +37,35 @@ import {AntecedentesComponent} from "./antecedentes/antecedentes.component";
     PedComponent,
     ISComponent
   ],
-  imports: [
-    CommonModule,
-    JsonPipe,
-    PedRoutingModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    InformanteComponent,
-    BrowserAnimationsModule,
-    GeralComponent,
-    MatExpansionModule,
-    MatSlideToggleModule,
-    RespiratorioComponent,
-    OuvidosComponent,
-    OlhosComponent,
-    GastrointestinalComponent,
-    CardiovascularComponent,
-    GenitourinarioComponent,
-    PeleComponent,
-    MusculoesqueleticoComponent,
-    SistemanervosoComponent,
-    MatTabsModule,
-    QpdhdaComponent,
-    AntecedentesComponent
-  ],
+    imports: [
+        CommonModule,
+        JsonPipe,
+        PedRoutingModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        InformanteComponent,
+        BrowserAnimationsModule,
+        GeralComponent,
+        MatExpansionModule,
+        MatSlideToggleModule,
+        RespiratorioComponent,
+        OuvidosComponent,
+        OlhosComponent,
+        GastrointestinalComponent,
+        CardiovascularComponent,
+        GenitourinarioComponent,
+        PeleComponent,
+        MusculoesqueleticoComponent,
+        SistemanervosoComponent,
+        MatTabsModule,
+        QpdhdaComponent,
+        AntecedentesComponent,
+        DarkModeToggleComponent
+    ],
   exports: [
     MatInputModule,
     MatStepperModule,

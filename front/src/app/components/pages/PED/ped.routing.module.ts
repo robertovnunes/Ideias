@@ -6,6 +6,7 @@ import {QpdhdaComponent} from "./qpdhda/qpdhda.component";
 
 const routes: Routes = [
   { path: 'ped', component: PedComponent },
+  { path: 'PED', redirectTo: 'ped'},
   { path: 'ped/antecedentes', component: AntecedentesComponent },
   {path: 'ped/qpd', component: QpdhdaComponent}
 ];

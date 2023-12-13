@@ -1,0 +1,9 @@
+div.dark-mode {
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+
+div.light-mode {
+  background-color: #dfe6e9;
+  color: #2d3436;
+}

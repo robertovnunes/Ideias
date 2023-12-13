@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {JsonPipe, NgForOf} from "@angular/common";
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
@@ -16,6 +16,7 @@ import {MatButtonModule} from "@angular/material/button";
 })
 export class InformanteComponent  implements OnInit{
   informante!: FormGroup;
+  @Input() infor!: any;
   escolaridade = [
     "Fundamental incompleto",
     "Fundamental completo",

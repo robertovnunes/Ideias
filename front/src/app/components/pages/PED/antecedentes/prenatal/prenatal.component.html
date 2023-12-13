@@ -4,7 +4,11 @@
       <div formGroupName="acompanhamento">
         <h2>Acompanhamento medico</h2>
         <mat-form-field class="formItem">
-          <mat-checkbox formControlName="realizou">Acompanhamento medico</mat-checkbox>
+          <mat-label>Fez acompanhamento medico</mat-label>
+          <mat-select formControlName="realizou">
+            <mat-option value="Sim">Sim</mat-option>
+            <mat-option value="Não">Não</mat-option>
+          </mat-select>
         </mat-form-field>
         <mat-form-field class="formItem">
           <mat-label>Onde</mat-label>
@@ -32,10 +36,10 @@
         <input matInput formControlName="radiacoes" placeholder="Radiações">
       </mat-form-field>
       <div formGroupName="doencascirurgicas">
-        <mat-form-field class="formItem">
+        <div class="formItem">
           <mat-label>Doenças cirurgicas</mat-label>
-          <mat-checkbox  formControlName="presente">Doenças cirurgicas</mat-checkbox>
-        </mat-form-field>
+          <mat-checkbox formControlName="presente">Doenças cirurgicas</mat-checkbox>
+        </div>
         <mat-form-field class="formItem">
           <mat-label>Periodo</mat-label>
           <input matInput formControlName="periodo" placeholder="Periodo">
