@@ -14,12 +14,12 @@ import {MatInputModule} from "@angular/material/input";
 })
 export class NeonatalComponent implements OnInit {
 
-  neoonatal!: FormGroup;
+  neonatal!: FormGroup;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.neoonatal = this.fb.group({
+    this.neonatal = this.fb.group({
       choroespontaneo: [''],
       grauatividade: [''],
       cianose: [''],

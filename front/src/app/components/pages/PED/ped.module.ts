@@ -64,7 +64,8 @@ import {DarkModeToggleComponent} from "../../shared/dark-mode-toggle/dark-mode-t
         MatTabsModule,
         QpdhdaComponent,
         AntecedentesComponent,
-        DarkModeToggleComponent
+        DarkModeToggleComponent,
+        
     ],
   exports: [
     MatInputModule,

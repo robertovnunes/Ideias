@@ -1,0 +1,58 @@
+<div class="container">
+  <form [formGroup]="alimentacao">
+    <div formGroupName="aleitamentoMaterno">
+      <h3>Aleitamento Materno</h3>
+      <mat-form-field>
+        <mat-label>Aleitamento exclusivo</mat-label>
+        <mat-select formControlName="exclusivo">
+          <mat-option *ngFor="let op of opcoesService.getOpcoes1()" [value]="op">
+            {{op}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Tempo de aleitamento</mat-label>
+        <input matInput formControlName="periodo">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Motivo do desmame</mat-label>
+        <input matInput formControlName="motivodesmame">
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <mat-label>Inicio da alimentação mista</mat-label>
+      <input matInput formControlName="iniciomista">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Inicio da alimentação artificial</mat-label>
+      <input matInput formControlName="inicioartificial">
+    </mat-form-field>
+    <div formGroupName="dietaatual">
+      <h3>Dieta Atual</h3>
+      <mat-form-field>
+        <mat-label>Cereais</mat-label>
+        <mat-checkbox formControlName="cereais"></mat-checkbox>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Vegetais</mat-label>
+        <mat-checkbox formControlName="vegetais"></mat-checkbox>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Carnes</mat-label>
+        <mat-checkbox formControlName="carnes"></mat-checkbox>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ovos</mat-label>
+        <mat-checkbox formControlName="ovos"></mat-checkbox>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Frutas</mat-label>
+        <mat-checkbox formControlName="frutas"></mat-checkbox>
+      </mat-form-field>
+    </div>
+    <mat-form-field formControlName="qtdrefeicoes">
+      <mat-label>Quantidade de refeições</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </form>
+</div>
