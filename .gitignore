@@ -45,4 +45,5 @@ Thumbs.db
 /back/.env
 
 front/.angular/
-/front/ped/node_modules
+/front/src/ped/node_modules
+
