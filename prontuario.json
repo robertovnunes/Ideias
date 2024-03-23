@@ -1,0 +1,993 @@
+{
+  "interrogatorio_sintomatologico": {
+    "informante": {
+      "nome": "String",
+      "sexo": "String",
+      "endereco": "String",
+      "complemento": "String",
+      "bairro": "String",
+      "cidade": "String",
+      "estado": "String",
+      "cep": "String",
+      "escolaridade": "String",
+      "parentesco": "String",
+      "obs": "String"
+    },
+    "prontuario_geral": {
+      "febre": {
+        "presente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "peso": [
+        "ganho_de_peso",
+        "perda_de_peso",
+        "nenhuma_alteracao",
+        "nao_avaliado"
+      ],
+      "atividade": [
+        "ativo",
+        "quieto",
+        "nao_avaliado"
+      ],
+      "apetite": [
+        "falta",
+        "em_excesso",
+        "normal",
+        "nao_avaliado"
+      ],
+      "altura": "String",
+      "obs_geral": "String"
+    },
+    "pele": {
+      "rash": [
+        "escarlatiforme",
+        "mobiliforme",
+        "ausente",
+        "nao_avaliado"
+      ],
+      "ictericia": {
+        "zona_1_de_kramer": "Boolean",
+        "zona_2_de_kramer": "Boolean",
+        "zona_3_de_kramer": "Boolean",
+        "zona_4_de_kramer": "Boolean",
+        "zona_5_de_kramer": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "infeccões_de_repeticao": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "obs": "String"
+    },
+    "olhos": {
+      "fotofobia": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "lacrimejando": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "edema_palpebral": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "secrecao": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "dor": {
+        "olho_esquerdo": "Boolean",
+        "olho_direito": "Boolean",
+        "ambos": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "acuidade_visual": {
+        "teste_do_olhinho_normal": "Boolean",
+        "teste_do_olhinho_anormal": "Boolean",
+        "sim": "Boolean",
+        "cegueira": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    },
+    "ouvidos": {
+      "dor": {
+        "ouvido_esquerdo": "Boolean",
+        "ouvido_direito": "Boolean",
+        "ambos": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "secrecao": {
+        "presente": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "infeccões_frequentes": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "acuidade_auditiva": {
+        "teste_da_orelhinha_normal": "Boolean",
+        "teste_da_orelhinha_anormal": "Boolean",
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    },
+    "respiratorio": {
+      "corrimento_nasal": {
+        "claro": "Boolean",
+        "esverdeado": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "sufocacao_ou_tosse_durante_alimentacao": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "epistaxis": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "tosse": {
+        "duracao": {
+          "menor_que_30_dias": "Boolean",
+          "maior_que_30_dias": "Boolean"
+        },
+        "tipo": {
+          "produtiva": "Boolean",
+          "seca": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "periodo": {
+          "noturna": "Boolean",
+          "matutina": "Boolean"
+        },
+        "nao_avaliado": "Boolean"
+      },
+      "resfriados_frequentes": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "dor_toracica": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "dificuldade_respiratoria": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "hemoptise": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    },
+    "cardiovascular": {
+      "dispneia": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "cianose": {
+        "labial": "Boolean",
+        "generalizada": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "palpitacao": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "taquicardia": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    },
+    "gastrointestinal": {
+      "nauseas": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "vomitos": {
+        "apos_alimentacao": "Boolean",
+        "sem_causa_aparente": "Boolean",
+        "nao": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "dor_abdominal": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "tenesmo": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "evacuacao": {
+        "normal": "Boolean",
+        "constipado": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "aspecto_das_fezes": {
+        "normais": "Boolean",
+        "brancas": "Boolean",
+        "escuras": "Boolean"
+      }
+    },
+    "genito/urinario": {
+      "urina": {
+        "quantidade": {
+          "normal": "Boolean",
+          "abundante": "Boolean",
+          "escassa": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "jato": {
+          "continuo": "Boolean",
+          "partido": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "cor": {
+          "clara": "Boolean",
+          "escura": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "odor": {
+          "inodoro": "Boolean",
+          "fetido": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "atividade_sexual": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "frequencia": {
+          "normal": "Boolean",
+          "mais_que_o_habitual": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "urgencia": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "disuria": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "corrimento_uretral": {
+          "sim": "Boolean",
+          "cor": {
+            "claro": "Boolean",
+            "leitoso": "Boolean",
+            "nao_avaliado": "Boolean"
+          },
+          "odor": {
+            "inodoro": "Boolean",
+            "fetido": "Boolean",
+            "nao_avaliado": "Boolean"
+          },
+          "nao_avaliado": "Boolean"
+        }
+      },
+      "genital_feminino": {
+        "corrimento_vaginal": {
+          "presente": "Boolean",
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "telarca": {
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "pubarca": {
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "historico_menstrual": {
+          "menstruacao": ["presente", "ausente", "nao_avaliado"],
+          "menarca": ["< 8 anos", "8-16 anos", "> 16 anos", "nao_avaliado"],
+          "Regularidade": ["< 28 dias", "28 dias", "> 28 dias", "Não avaliado"],
+          "Fluxo": ["Normal", "Aumentado", "Diminuído", "Não avaliado"]
+        }
+      },
+      "genital_masculino": {
+        "pubarca": {
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "volume_testicular": {
+          "normal_para_a_idade": "Boolean",
+          "menor_que_o_normal": "Boolean",
+          "maior_que_o_normal": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "tamanho_do_penis": {
+          "normal_para_a_idade": "Boolean",
+          "menor_que_o_normal": "Boolean",
+          "maior_que_o_normal": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "erecões": {
+          "presente": "Boolean",
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "polucões": {
+          "presente": "Boolean",
+          "ausente": "Boolean",
+          "nao_avaliado": "Boolean"
+        }
+      }
+    },
+    "musculoesqueletico": {
+      "deformidades": {
+        "presente": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "tumefacões": {
+        "presente": "Boolean",
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "fraqueza_muscular": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "dores_osseas_e_articulares": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    },
+    "sistema_nervoso": {
+      "cefaleia": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "convulsões": {
+        "febril": {
+          "tonica": "Boolean",
+          "tonica_cronica": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "afebril": {
+          "localizada": "Boolean",
+          "generalizada": "Boolean",
+          "nao_avaliada": "Boolean"
+        },
+        "ausente": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "traumas_cranianos": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "sincopes": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "paresias": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "paralisias": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      },
+      "retardo_neuropsicomotor": {
+        "sim": "Boolean",
+        "nao_avaliado": "Boolean"
+      }
+    }
+  },
+  "QPD/HDA": {
+    "queixa_principal": "String",
+    "historia_da_doenca_atual": "String",
+    "adendo1": "String",
+    "adendo2": "String",
+    "adendo3": "String"
+  },
+  "antecedentes_pessoais": {
+    "pre_natal": {
+      "acompanhamento_medico": {
+        "medico": {
+          "nome": "String",
+          "CRM": "String",
+          "especialidade": "String"
+        },
+        "anormalidades": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "medicacões": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "radiacões": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "doencas_cirúrgicas": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "grupo_sanguineo": {
+          "a": "Boolean",
+          "b": "Boolean",
+          "o": "Boolean",
+          "ab": "Boolean",
+          "rh": {
+            "positivo": "Boolean",
+            "negativo": "Boolean"
+          }
+        },
+        "testes_lueticos": {
+          "sim": "Boolean",
+          "nao_avaliado": "Boolean"
+        },
+        "vacina_anti_tetanica": {
+          "sim": "Boolean",
+          "quantas": "number"
+        },
+        "estado_nutricional_durante_a_gravidez": {
+          "alimentacao": {
+            "adequada": "Boolean",
+            "inadequada": "Boolean",
+            "nao_avaliado": "Boolean"
+          },
+          "peso": "String",
+          "anemia": {
+            "sim": "Boolean"
+          }
+        }
+      }
+    },
+    "natal": {
+      "duracao_do_trabalho_de_parto": "String",
+      "complicacões": "String",
+      "tipo_de_parto": [
+        "Espontaneo",
+        "instrumentado",
+        "cirurgico"
+      ],
+      "tipo_de_apresentacao": [
+        "Cefalica",
+        "pelvica",
+        "outra"
+      ],
+      "anestesia": "Boolean",
+      "analgesia": {
+        "tipo": "String",
+        "tempo_de_duracao": "String"
+      }
+    },
+    "neo_natal": {
+      "choro_espontaneo": "Boolean",
+      "grau_de_atividade": "String",
+      "cianose": "Boolean",
+      "reanimacao": "Boolean",
+      "apgar_1_minuto": "number",
+      "apgar_5_minutos": "number",
+      "ictericia": "Boolean",
+      "rash": "Boolean",
+      "sangramentos": "Boolean",
+      "vomitos": "Boolean",
+      "infeccoes": "Boolean",
+      "anomalias_congenitas": "Boolean",
+      "paralisias": "Boolean",
+      "coriza": "Boolean",
+      "permeabilidade_nasal": "String",
+      "convulsões": "Boolean",
+      "dados_antropometricos_ao_nascer": {
+        "peso": "number",
+        "comprimento": "number",
+        "perimetro_cefalico": "number",
+        "perimetro_toracico": "number"
+      }
+    },
+    "alimentacao": {
+      "aleitamento_materno": {
+        "exclusivo": "String",
+        "quanto_tempo": "String",
+        "causa_do_desmame": "String"
+      },
+      "alimentacao_mista": {
+        "quando_iniciada": "String"
+      },
+      "artificial": {
+        "quando_iniciada": "String"
+      },
+      "inicio_da_alimentacao_solida": "String",
+      "dieta_atual": {
+        "cereais": "Boolean",
+        "vegetais": "Boolean",
+        "carnes": "Boolean",
+        "ovos": "Boolean",
+        "frutas": "Boolean"
+      },
+      "número_de_refeicões": "number",
+      "horarios": [],
+      "tipo_de_diluicao_dos_carboidratos": "String",
+      "tecnica_utilizada": {
+        "uso_de_mamadeira": "Boolean",
+        "colher": "Boolean",
+        "copo": "Boolean",
+        "alimentacao_pastosa": "Boolean",
+        "liquidificada": "Boolean",
+        "chantagem_afetiva": "Boolean",
+        "brincadeiras_na_hora_das_refeicões": "Boolean"
+      }
+    },
+    "crescimento_e_desenvolvimento": {
+      "idade_que": {
+        "sustentou_a_cabeca": "String",
+        "sentou": "String",
+        "andou_solto": "String",
+        "falou_primeiras_palavras": "String"
+      },
+      "como_parece_em_relacao_aos_irmaos": "String",
+      "com_que_idade_foi_a_escola": "String",
+      "como_e_o_aprendizado": "String",
+      "houve_repeticao_de_ano": "Boolean",
+      "como_e_o_relacionamento_com_colegas_e_professores": "String",
+      "particularidades_da_fala": "String",
+      "erupcao_e_mudanca_dentaria": "String",
+      "controle_dos_esfincteres": "String",
+      "regularidade_do_crescimento": "String"
+    },
+    "habitos": {
+      "usa_chupeta": "Boolean",
+      "chupa_dedo": "Boolean",
+      "tiques": "Boolean",
+      "alteracao_do_apetite": "Boolean",
+      "enurese": "Boolean",
+      "roi_unhas": "Boolean",
+      "perturbacões_do_sono": "Boolean",
+      "dorme_na_cama_dos_pais": "Boolean"
+    },
+    "imunizacões": {
+      "vacinacao_basica": "Boolean",
+      "reforcos": "Boolean",
+      "efeitos_colaterais": "String",
+      "teste_de_Mantoux": "String"
+    },
+    "doencas_anteriores": {
+      "infecto_contagiosas": {
+        "Coqueluche": "Boolean",
+        "sarampo": "Boolean",
+        "varicela": "Boolean",
+        "parotidite": "Boolean",
+        "difteria": "Boolean",
+        "tetano": "Boolean"
+      },
+      "diarreia": "Boolean",
+      "pneumonia": "Boolean",
+      "meningite": "Boolean",
+      "febre_reumatica": "Boolean",
+      "nefropatia": "Boolean",
+      "tuberculose": "Boolean",
+      "alergia": {
+        "Asma": "Boolean",
+        "eczema": "Boolean",
+        "alimentar": "Boolean"
+      },
+      "cirurgias_e_acidentes": {
+        "natureza": "String",
+        "resultado": "String"
+      },
+      "historia_de_transfusões": "Boolean",
+      "hospitalizacões": "number",
+      "tratamentos_realizados": [
+        "Antibioticos para a coqueluche"
+      ]
+    },
+    "outras_informacões": {
+      "lugares_habitados_pelo_paciente": [],
+      "banhos_de_rio_acude": "Boolean",
+      "foi_picado_pelo_barbeiro": "Boolean",
+      "exposicao_a_agentes_toxicos": [],
+      "reacões_a_soro_medicamento": {
+        "sim": [
+          "Boolean",
+          {
+            "quais": "String",
+            "quando": "String",
+            "tipo_duracao": "String"
+          }
+        ],
+        "contato_com_tuberculose": "Boolean"
+      }
+    }
+  },
+  "historia_familiar": {
+    "pais": {
+      "tipo_de_uniao": "String",
+      "pai": {
+        "idade": "number",
+        "condicoes_de_saude": "String",
+        "ocupacao_e_salario": {
+          "ocupacao": "String",
+          "salario": "number"
+        }
+      },
+      "mae": {
+        "idade": "number",
+        "condicoes_de_saude": "String",
+        "ocupacao_e_salario": {
+          "ocupacao": "String",
+          "salario": "number"
+        },
+        "trabalha_fora": "Boolean",
+        "na_sua_ausencia_quem_cuida_da_crianca": "String"
+      }
+    },
+    "heredograma": {
+      "pai": {
+        "nome": "String",
+        "idade": "number"
+      },
+      "mae": {
+        "nome": "String",
+        "idade": "number"
+      },
+      "filhos": [
+        {
+          "nome": "String",
+          "idade": "number",
+          "paciente": "Boolean"
+        },
+        {
+          "nome": "String",
+          "idade": "number"
+        }
+      ]
+    },
+    "condicoes_de_saude_e_falecimento_entre_os_irmaos": [
+      {
+        "nome": "String",
+        "idade": "number",
+        "condicoes_de_saude": "String",
+        "falecimento": "Boolean"
+      }
+    ],
+    "doencas_familiares": [],
+    "condicoes_domesticas": {
+      "tipo_de_residencia": "String",
+      "condicoes_de_salubridade_do_ambiente_de_casa": "String",
+      "numero_de_comodos_e_ocupantes": "String",
+      "existencia_ou_nao_de_agua": "Boolean",
+      "luz": "Boolean",
+      "saneamento": {
+        "ausente": "Boolean",
+        "descricao_ausencia": "String"
+      },
+      "presenca_de_animais_em_casa": "Boolean"
+    }
+  },
+  "exame_fisico": {
+    "inspecao": "String",
+    "pele": {
+      "cor": "String",
+      "textura": "String",
+      "humidade": "String",
+      "temperatura": "String",
+      "escamacao": "Boolean",
+      "cicatrizes": "Boolean",
+      "distribuicao_de_pelos": "String",
+      "hemorragias": "Boolean",
+      "rash": "Boolean",
+      "circulacao_colateral": "Boolean",
+      "edema": "Boolean",
+      "tecido_celular_subcutaneo": "Boolean",
+      "turgor": "Boolean",
+      "unhas": {
+        "consistencia": "String",
+        "deformidades": "Boolean",
+        "manchas": "Boolean",
+        "inflamacoes": "Boolean"
+      }
+    },
+    "ganglios_linfaticos": {
+      "localizacao": "String",
+      "tamanho": "String",
+      "consistencia": "String",
+      "mobilidade": "String",
+      "sensibilidade": "String"
+    },
+    "cranio": {
+      "tamanho": "String",
+      "forma": "String",
+      "fontanelas": {
+        "tamanho": "String",
+        "tensao": "String"
+      },
+      "sutura": "Boolean",
+      "craneotabes": "Boolean",
+      "cabelos": "Boolean",
+      "lesoes_couro_cabeludo": "Boolean"
+    },
+    "olhos": {
+      "ptose": "Boolean",
+      "edema palpebral": "Boolean",
+      "escleroticas e conjuntivas": {
+        "cor": "String",
+        "hemorragias": "Boolean",
+        "secrecao": "Boolean",
+        "inflamacao": "Boolean",
+        "secura": "Boolean"
+      },
+      "cilios": "String",
+      "movimentos oculares anormais": {
+        "estrabismo": "Boolean",
+        "nistagmo": "Boolean"
+      },
+      "pupilas": {
+        "tamanho": "String",
+        "reacao à luz": "String",
+        "opacidade": "String"
+      },
+      "acuidade visual": "String"
+    },
+    "sistema_otorrinolaringologico": {
+      "ouvidos": {
+        "inspecao": {
+          "configuracao_e_posicao_das_orelhas": "String",
+          "alteracao_da_coloracao": "String"
+        },
+        "palpacao": {
+          "dor_e_edema_sobre_a_mastoide": "Boolean",
+          "canal_auditivo_externo": "String",
+          "secrecao": "String"
+        },
+        "otoscopia": {
+          "aparencia_do_conduto_auditivo_e_da_membrana_timpanica": "String"
+        }
+      },
+      "nariz": {
+        "inspecao": {
+          "batimentos_de_asas_do_nariz": "String",
+          "secrecoes": "String"
+        },
+        "palpacao": {
+          "tumoracoes": "Boolean"
+        },
+        "rinoscopia_anterior": {
+          "permeabilidade": "String",
+          "cornetos": "String"
+        }
+      },
+      "labios": {
+        "inspecao": {
+          "cor": "String",
+          "umidade": "String",
+          "erupcoes": "Boolean",
+          "fissuras": "Boolean"
+        },
+        "palpacao": {
+          "massas": "Boolean"
+        }
+      },
+      "gengivas": {
+        "inspecao": {
+          "cor": "String",
+          "hemorragias": "Boolean"
+        }
+      },
+      "lingua": {
+        "inspecao": {
+          "mucosa_oral_(cor,_aspecto)": "String",
+          "grau_de_umidade": "String",
+          "estado_das_papilas": "String",
+          "tremor": "String",
+          "exsudatos": "String"
+        },
+        "palpacao": {
+          "tumoracoes": "String"
+        }
+      },
+      "dentes": {
+        "inspecao": {
+          "numero": "String",
+          "implantacao": "String",
+          "conservacao": "String"
+        }
+      },
+      "faringe": {
+        "inspecao": {
+          "cor": "String",
+          "exsudato": "String"
+        }
+      },
+      "laringe": {
+        "ausculta": {
+          "estridor": "String"
+        }
+      }
+    },
+    "pescoco": {
+      "inspecao": {
+        "retracoes": "String",
+        "torcicolo": "String"
+      },
+      "palpacao": {
+        "claviculas": "String",
+        "tireoide": {
+          "aumento": "Boolean",
+          "massas": "Boolean",
+          "consistencia": "String"
+        },
+        "outras_massas_tumorais": "String",
+        "fistulas": "Boolean",
+        "rigidez": "Boolean",
+        "fossa_supra_clavicular": "String"
+      }
+    },
+    "aparelho_respiratorio": {
+      "inspecao": {
+        "forma_do_torax": "String",
+        "simetria": "Boolean",
+        "contornos": "String",
+        "proeminencias": "String",
+        "massas_anormais": "String",
+        "mamas": "String"
+      },
+      "palpacao": {
+        "tipo_de_respiracao": "String",
+        "tiragem": "String",
+        "frequencia_respiratoria": "String"
+      },
+      "percussao": {
+        "fremito_toraco_vocal": "String",
+        "bronquico": "String",
+        "pleural": "String",
+        "comparando_os_lados": {
+          "macicez": "String",
+          "submacicez": "String",
+          "normal": "String"
+        }
+      },
+      "ausculta": {
+        "comparando_os_lados": {
+          "tipo_de_som": "String",
+          "estertores_ruidos_adventicios": "String",
+          "broncofonia": "String"
+        }
+      }
+    },
+    "aparelho_cardio_vascular": {
+      "inspecao": {
+        "abaulamento_ou_retracao_do_precordio": "String",
+        "ictus": {
+          "sede": "String",
+          "carater": "String"
+        },
+        "local_e_forca_dos_batimentos_do_ictus": "String",
+        "localizacao_de_fremidos": "String"
+      },
+      "palpacao": {
+        "arterias_perifericas": {
+          "pulso": "String",
+          "forca": "String",
+          "volume": "String",
+          "ritmo": "String",
+          "tensao": "String"
+        }
+      },
+      "ausculta": {
+        "carater_das_bulhas": "String",
+        "sopros": {
+          "sede": "String",
+          "tempo_maximo_de_intensidade": "String",
+          "propagacao": "String",
+          "efeito_da_mudanca_de_posicao_e_de_exercicios": "String"
+        },
+        "frequencia_cardiaca": "String",
+        "tensao_arterial": "String"
+      }
+    },
+    "aparelho_gastro_intestinal": {
+      "inspecao": {
+        "forma_do_abdomen": "String",
+        "cicatriz_umbilical": "String",
+        "peristaltismo": "Boolean",
+        "distensao": "Boolean",
+        "tumoracoes": "Boolean",
+        "anus": {
+          "escoriacoes": "Boolean",
+          "fissuras": "Boolean",
+          "prolapso": "Boolean"
+        }
+      },
+      "percussao": {
+        "ondas_fluidas": "String",
+        "timpanismo": "String"
+      },
+      "palpacao": {
+        "superficial": {
+          "estado_das_paredes_musculares": "String",
+          "espasmos": "Boolean",
+          "rigidez": "Boolean",
+          "dor": "Boolean"
+        },
+        "profunda": {
+          "estomago": "String",
+          "figado": "String",
+          "baco": "String",
+          "rins": "String",
+          "presenca_de_massas_tumorais": {
+            "dimensoes_em_centimetros": "String",
+            "consistencia": "String",
+            "superficie": "String",
+            "bordos": "String",
+            "se_ha_dor": "Boolean"
+          },
+          "hernias": {
+            "redutibilidade": "String"
+          }
+        }
+      },
+      "ausculta": {
+        "ruidos_hidro_aereos": "String"
+      }
+    },
+    "aparelho_genito_urinario": {
+      "coloracao": "String",
+      "coalescencia_de_pequenos_labios": "String",
+      "perfuracao_do_himen": "Boolean",
+      "fimose": "Boolean",
+      "circuncisao": "Boolean",
+      "hidrocele": "Boolean",
+      "testiculos": {
+        "localizacao": "String",
+        "tamanho": "String",
+        "consistencia": "String"
+      },
+      "secrecao_uretral_ou_vaginal": "Boolean",
+      "presenca_de_pelos": "Boolean",
+      "palpacao_das_lojas_renais_e_bexiga": "String"
+    },
+    "aparelho_musculo_esqueletico": {
+      "membros": {
+        "anomalias": "String",
+        "deformidades": "String",
+        "edemas": "String",
+        "tumoracoes": "String",
+        "forca_muscular": "String",
+        "dor_ossea_e_articular": "String",
+        "movimentacao_ativa_e_passiva": "String"
+      },
+      "coluna": {
+        "anomalias": "String",
+        "deformidades": "String",
+        "edemas": "String",
+        "tumoracoes": "String",
+        "forca_muscular": "String",
+        "dor_ossea_e_articular": "String",
+        "movimentacao_ativa_e_passiva": "String"
+      },
+      "postura_em_pe": {
+        "lordose": "String",
+        "escoliose": "String",
+        "cifose": "String",
+        "curvatura_para_frente": {
+          "simetria_de_omoplatas": "String",
+          "espasmos_musculares": "Boolean",
+          "dor_local": "Boolean",
+          "dor_reflexa": "Boolean"
+        }
+      }
+    },
+    "sistema_nervoso": {
+      "avaliacao_do_nivel_de_consciencia": "String",
+      "orientacao": "String",
+      "sinais_focais_relativos_aos_pares_cranianos": "String"
+    }
+  },
+  "hipotese_diagnostica": [
+    {
+      "problema": "String",
+      "diagnostico": "String",
+      "conduta": "String",
+      "prevencao": "String"
+    }
+  ]
+}
+

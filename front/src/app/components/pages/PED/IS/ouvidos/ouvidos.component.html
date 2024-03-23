@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="ouvidos">
+    <div class="formItem">
+      <mat-label>Dor</mat-label>
+      <mat-select formControlName="dor">
+        <mat-option value="oe">Ouvido esquerdo</mat-option>
+        <mat-option value="od">Ouvido direito</mat-option>
+        <mat-option value="ambos">Ambos</mat-option>
+        <mat-option value="nenhum">Nenhum</mat-option>
+        <mat-option value="nao-avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </div>
+    <div class="formItem">
+      <mat-label>Secreção</mat-label>
+      <mat-select formControlName="secrecao">
+        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </div>
+    <div class="formItem">
+      <mat-label>Infecções frequentes</mat-label>
+      <mat-select formControlName="infeccoes_frequentes">
+        <mat-option *ngFor="let item of opcoes" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </div>
+    <div class="acuidade formItem">
+      <mat-label>Acuidade auditiva</mat-label>
+      <mat-select formControlName="acuidade">
+        <mat-option value="Selecione">Selecione</mat-option>
+        <mat-option  value="teste-olhinho-normal">Teste da orelhinha normal</mat-option>
+        <mat-option  value="teste-olhinho-anormal">Teste da orelhinha anormal</mat-option>
+        <mat-option value="nao-avaliado">Não avaliado</mat-option>
+      </mat-select>
+    </div>
+  </form>
+  <pre>
+    {{ouvidos.value | json}}
+  </pre>
+</div>

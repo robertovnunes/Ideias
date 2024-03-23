@@ -1,0 +1,82 @@
+<div class="container">
+  <mat-stepper #stepper orientation="horizontal" linear="true">
+    <mat-step label="Informante">
+      <app-informante></app-informante>
+      <div class="navButton">
+        <button mat-button matStepperNext>Geral</button>
+      </div>
+    </mat-step>
+    <mat-step label="Geral">
+      <app-geral></app-geral>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Informante</button>
+        <button mat-button matStepperNext>Pele</button>
+      </div>
+    </mat-step>
+    <mat-step label="Pele">
+      <app-pele></app-pele>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Geral</button>
+        <button mat-button matStepperNext>Olhos</button>
+      </div>
+    </mat-step>
+    <mat-step label="Olhos">
+      <app-olhos></app-olhos>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Pele</button>
+        <button mat-button matStepperNext>Ouvidos</button>
+      </div>
+    </mat-step>
+    <mat-step label="Ouvidos">
+      <app-ouvidos></app-ouvidos>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Olhos</button>
+        <button mat-button matStepperNext>Respiratório</button>
+      </div>
+    </mat-step>
+    <mat-step label="Respiratório">
+      <app-respiratorio></app-respiratorio>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Ouvidos</button>
+        <button mat-button matStepperNext>Cardiovascular</button>
+      </div>
+    </mat-step>
+    <mat-step label="Cardiovascular">
+      <app-cardiovascular></app-cardiovascular>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Respiratório</button>
+        <button mat-button matStepperNext>Gastrointestinal</button>
+      </div>
+    </mat-step>
+    <mat-step label="Gastrointestinal">
+      <app-gastrointestinal></app-gastrointestinal>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Cardiovascular</button>
+        <button mat-button matStepperNext>Genitourinário</button>
+      </div>
+    </mat-step>
+    <mat-step label="Genitourinário">
+      <app-genitourinario></app-genitourinario>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Gastrointestinal</button>
+        <button mat-button matStepperNext>Musculo-Esquelético</button>
+      </div>
+    </mat-step>
+    <mat-step label="Musculo-Esquelético">
+      <app-musculoesqueletico></app-musculoesqueletico>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Genitourinário</button>
+        <button mat-button matStepperNext>Sistema Nervoso</button>
+      </div>
+    </mat-step>
+    <mat-step label="Sistema Nervoso">
+      <h3>Sistema Nervoso</h3>
+      <app-sistemanervoso></app-sistemanervoso>
+      <div class="navButton">
+        <button mat-button matStepperPrevious>Musculo-Esquelético</button>
+        <button mat-button matStepperNext>Endócrino</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+</div>

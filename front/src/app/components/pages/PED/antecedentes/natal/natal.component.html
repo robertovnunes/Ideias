@@ -1,0 +1,46 @@
+<div class="container">
+  <form [formGroup]="natal">
+    <mat-form-field>
+      <mat-label>Duração do trabalho de parto</mat-label>
+      <input matInput formControlName="duracao">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Complicações</mat-label>
+      <input matInput formControlName="complicacoes">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tipo de parto</mat-label>
+      <mat-select formControlName="tipo_parto">
+        <mat-option *ngFor="let tipo_parto of tipoparto" [value]="tipo_parto">
+          {{tipo_parto}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tipo de apresentação</mat-label>
+      <mat-select formControlName="apresentacao">
+        <mat-option *ngFor="let op of tiposapresentacao" [value]="op">
+          {{op}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <mat-label>Anestesia</mat-label>
+      <mat-checkbox formControlName="anestesia">Anestesia</mat-checkbox>
+    </div>
+    <div>
+      <mat-label>Analgesia</mat-label>
+      <mat-checkbox formControlName="analgesico">Analgesia</mat-checkbox>
+    </div>
+    <div formGroupName="analgesia">
+      <mat-form-field>
+        <mat-label>Tipo de analgesia</mat-label>
+        <input matInput formControlName="tipo">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Tempo de analgesia</mat-label>
+        <input matInput formControlName="duracao">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
