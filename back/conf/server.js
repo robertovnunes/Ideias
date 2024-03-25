@@ -1,5 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
+
+let consign = require("consign");
+
+
 const server = express();
 const port = 3000;
 
@@ -17,6 +21,9 @@ server.use(
     }),
 );
 server.use(express.json());
+
+consign().include('src/routes')
+    .into(server);
 
 server.get("/", (req, res) => {
     res.send("It's working!");

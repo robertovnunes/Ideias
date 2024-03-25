@@ -1,54 +1,54 @@
 const prenatal = {
     acompanhamento_medico: {
         medico: {
-            nome: string,
-            CRM: string,
-            especialidade: string
+            nome: String,
+            CRM: String,
+            especialidade: String
         }
     },
     anormalidades: {
-        sim: boolean,
-        nao_avaliado: boolean
+        sim: Boolean,
+        nao_avaliado: Boolean
     },
     medicacoes: {
-        sim: boolean,
-        nao_avaliado: boolean
+        sim: Boolean,
+        nao_avaliado: Boolean
     },
     radiacoes: {
-        sim: boolean,
-        nao_avaliado: boolean
+        sim: Boolean,
+        nao_avaliado: Boolean
     },
     doencas_cirurgicas: {
-        sim: boolean,
-        nao_avaliado: boolean
+        sim: Boolean,
+        nao_avaliado: Boolean
     },
     grupo_sanguineo: {
-        a: boolean,
-        b: boolean,
-        o: boolean,
-        ab: boolean,
+        a: Boolean,
+        b: Boolean,
+        o: Boolean,
+        ab: Boolean,
         rh: {
-            positivo: boolean,
-            negativo: boolean
+            positivo: Boolean,
+            negativo: Boolean
         }
     },
     testes_lueticos: {
-        sim: boolean,
-        nao_avaliado: boolean
+        sim: Boolean,
+        nao_avaliado: Boolean
     },
     vacina_antitetanica: {
-        sim: boolean,
-        quantas: number
+        sim: Boolean,
+        quantas: Number
     },
     estado_nutricional_durante_a_gravidez: {
         alimentacao: {
-            adequada: boolean,
-            inadequada: boolean,
-            nao_avaliado: boolean
+            adequada: Boolean,
+            inadequada: Boolean,
+            nao_avaliado: Boolean
         },
-        peso: string,
+        peso: Number,
         anemia: {
-            sim: boolean
+            sim: Boolean
         }
     }
 }
