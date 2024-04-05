@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const doencas = {
     infectocontagiosas: {
         coqueluche: Boolean,
@@ -27,4 +28,4 @@ const doencas = {
     tratamentos_realizados: []
 
 };
-module.exports = doencas;
+module.exports = mongoose.model("doencas", doencas);

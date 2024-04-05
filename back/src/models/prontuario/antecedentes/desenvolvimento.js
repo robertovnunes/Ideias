@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const desenvolvimento = {
     idade_que: {
         sustentou_a_cabeca: String,
@@ -15,4 +16,4 @@ const desenvolvimento = {
     controle_dos_esfincteres: String,
     regularidade_do_crescimento: String
 };
-module.exports = desenvolvimento;
+module.exports = mongoose.model("desenvolvimento", desenvolvimento);

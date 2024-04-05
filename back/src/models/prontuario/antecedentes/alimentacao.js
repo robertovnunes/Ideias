@@ -1,3 +1,4 @@
+const mongoose = require ("mongoose");
 const alimentacao = {
     aleitamento_materno: {
         exclusivo: String,
@@ -31,4 +32,4 @@ const alimentacao = {
             brincadeiras_na_hora_das_refeicoes: Boolean
     }
 }
-module.exports = alimentacao;
+module.exports = mongoose.model("alimentacao", alimentacao);
