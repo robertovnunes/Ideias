@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const musculoesqueletico = {
     deformidades: {
         presente: Boolean,
@@ -19,4 +18,4 @@ const musculoesqueletico = {
         nao_avaliado: Boolean
     }
 }
-module.exports = mongoose.model("musculoesqueletico", musculoesqueletico);
+module.exports = musculoesqueletico;

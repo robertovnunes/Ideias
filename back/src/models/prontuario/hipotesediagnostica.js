@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const hipotese_diagnostica = [
     {
         problema: String,
@@ -7,4 +6,4 @@ const hipotese_diagnostica = [
         prevencao: String
     }
 ];
-module.exports = mongoose.model('hipotesediagnostica', hipotese_diagnostica);
+module.exports = hipotese_diagnostica;

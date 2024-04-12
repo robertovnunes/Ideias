@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const condicoes_domesticas = {
     tipo_de_residencia: String,
         salubridade_do_ambiente_de_casa: String,
@@ -12,4 +11,4 @@ const condicoes_domesticas = {
     },
     presenca_de_animais_em_casa: Boolean
 };
-module.exports = mongoose.model('condicoes_domesticas', condicoes_domesticas);
+module.exports = condicoes_domesticas;

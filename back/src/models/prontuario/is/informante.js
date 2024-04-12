@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const informante = {
         nome: String,
         sexo: String,
@@ -13,4 +12,4 @@ const informante = {
         obs: String
 }
 
-module.exports = mongoose.model("informante", informante);
+module.exports = informante;

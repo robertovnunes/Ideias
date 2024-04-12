@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const gastrointestinal = {
     nauseas: {
         sim: Boolean,
@@ -29,4 +28,4 @@ const gastrointestinal = {
         escuras: Boolean
     }
 }
-module.exports = mongoose.model("gastrointestinal", gastrointestinal);
+module.exports = gastrointestinal;

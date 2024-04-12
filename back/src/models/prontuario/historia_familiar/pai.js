@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const pai = {
     idade: Number,
     condicoes_de_saude: String,
@@ -7,4 +6,4 @@ const pai = {
         salario: Number
     }
 }
-module.exports = mongoose.model("pai", pai);
+module.exports = pai;

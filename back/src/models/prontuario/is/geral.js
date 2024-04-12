@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const prontuario_geral = {
     febre: {
         presente: Boolean,
@@ -25,4 +24,4 @@ const prontuario_geral = {
     obs_geral: String
 }
 
-module.exports = mongoose.model("prontuario_geral", prontuario_geral);
+module.exports = prontuario_geral;

@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const olhos =  {
       fotofobia: {
         sim: Boolean,
@@ -25,4 +24,4 @@ const olhos =  {
         nao_avaliado: Boolean
       }
     }
-module.exports = mongoose.model("olhos", olhos);
+module.exports =  olhos;

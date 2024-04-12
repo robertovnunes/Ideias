@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const sistema_nervoso = {
     cefaleia: {
         sim: Boolean,
@@ -39,4 +38,4 @@ const sistema_nervoso = {
         nao_avaliado: Boolean
     }
 }
-module.exports = mongoose.model("sistema_nervoso", sistema_nervoso);
+module.exports = sistema_nervoso;

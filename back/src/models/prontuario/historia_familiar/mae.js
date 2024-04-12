@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const mae = {
     idade: Number,
     condicoes_de_saude: String,
@@ -9,4 +8,4 @@ const mae = {
     trabalha_fora: Boolean,
     na_sua_ausencia_quem_cuida_da_crianca: String
 }
-module.exports = mongoose.model("mae", mae);
+module.exports = mae;

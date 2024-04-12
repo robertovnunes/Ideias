@@ -4,3 +4,4 @@ const imunizacoes = {
     efeitos_colaterais: String,
     teste_de_Mantoux: String
 }
+module.exports = imunizacoes;

@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const pele = {
     rash: {
         escarlatiforme: Boolean,
@@ -21,4 +20,4 @@ const pele = {
     },
     obs: String
 }
-module.exports = mongoose.model("pele", pele);
+module.exports = pele;

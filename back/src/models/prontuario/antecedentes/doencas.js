@@ -27,4 +27,4 @@ const doencas = {
     tratamentos_realizados: []
 
 };
-module.exports = doencas;
+module.exports =  doencas;
