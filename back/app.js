@@ -1,7 +1,7 @@
-const app = require("../conf/server");
+const app = require("./conf/server");
 const cors = require("cors");
-const userRoutes = require("./routes/user");
-const prontuarioRoutes = require("./routes/prontuario");
+const userRoutes = require("./app/routes/user");
+const prontuarioRoutes = require("./app/routes/prontuario");
 
 
 app.use(cors());
