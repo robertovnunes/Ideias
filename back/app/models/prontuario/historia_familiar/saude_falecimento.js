@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-
 const saude_falecimento = {
         nome: String,
         idade: Number,

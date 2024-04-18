@@ -42,7 +42,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-/back/.env
+/back/app/.env
 
 front/.angular/
 /front/ped/node_modules

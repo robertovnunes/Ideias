@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const server = express();
+let server = express();
 const port = 3000;
 
 require('dotenv').config()
@@ -18,20 +18,15 @@ server.use(
 );
 server.use(express.json());
 
-server.get("/", (req, res) => {
-    res.send("It's working!");
-});
 
 mongoose.connect(url).then(() => {
     console.log("Connected to MongoDB");
     server.listen(port, () => {
         console.log("Server listening on port 3000");
     });
-})
-    .catch((error) => {
+}).catch((error) => {
         console.log("Error connecting to MongoDB");
         console.log(error);
     });
-
 
 module.exports = server;

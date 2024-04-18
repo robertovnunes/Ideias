@@ -1,11 +1,10 @@
 const pai = require('./pai');
 const mae = require('./mae');
 const filho = require('./filho');
-const mongoose = require("mongoose");
 
-const heredrograma = mongoose.model("heredograma", {
+const heredrograma =  {
     pai: pai,
     mae: mae,
     filhos: [filho]
-});
+};
 module.exports = heredrograma;

@@ -5,4 +5,4 @@ const QPDHDA = {
     adendo2: String,
     adendo3: String
 }
-module.exports = "QPDHDA", QPDHDA;
+module.exports = QPDHDA;

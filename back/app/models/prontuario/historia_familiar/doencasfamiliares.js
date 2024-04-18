@@ -1,3 +1,3 @@
-const doencasfamiliares = [];
+const doencasfamiliares = [String];
 
 module.exports = doencasfamiliares;
