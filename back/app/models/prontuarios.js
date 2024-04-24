@@ -15,7 +15,6 @@ const prontuario = new mongoose.Schema( {
     qpdhda
 });
 
-//consign().include("models/prontuario").into(prontuario);
 
 
-module.exports = mongoose.model('prontuario', prontuario);
+module.exports = prontuario;
